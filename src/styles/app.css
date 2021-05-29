@@ -1,0 +1,52 @@
+#nav-bar {
+  transition: left 0.25s ease-in-out;
+}
+
+#nav-bar.expanded {
+  left: 0;
+  transition: left 0.25s ease-in-out;
+}
+
+#app-overlay.active {
+  z-index: 40;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+  width: 411px;
+  height: 100vh;
+}
+
+.modal.active {
+  z-index: 40;
+  background-color: rgba(0,0,0,0.8);
+  transition: background-color 250ms ease-in-out;
+}
+
+.modal-content {
+  top: 64px;
+  left: 24px;
+  right: 24px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.modal-content.active {
+  z-index: 50;
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+
+.btn {
+  @apply px-4 py-2 text-sm text-opacity-90;
+}
+
+.btn-primary {
+  @apply text-primary;
+}
