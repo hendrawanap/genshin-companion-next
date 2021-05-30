@@ -5,12 +5,15 @@ import TaskDetailList from "./TaskDetail";
 import { MaterialChip } from "../../components/material/Material";
 import { Link } from "react-router-dom";
 import Image from 'next/image';
+import { ResinProvider } from "../../contexts/ResinContext";
 
 function Home() {
   return (
-    <div className="pt-14">
+    <div className="pt-14 py-2">
       <Welcome name="Tabibito" />
-      <ResinTask />
+      <ResinProvider>
+        <ResinTask/>
+      </ResinProvider>
       <TodaysDomain />
     </div>
   );
@@ -125,6 +128,4 @@ function TodaysDomain() {
     </div>
   );
 }
-
-function ComponentWithModal(component, modalHandler) {}
 export default Home;

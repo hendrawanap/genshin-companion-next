@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Head from "next/head";
 import Image from 'next/image';
 import Home from './home/index';
 import { Modal, modalHandler } from "../components/Modal";
+import { ModalContext, ModalProvider } from "../contexts/ModalContext";
 
 const getClassList = element => document.getElementById(element).classList;
 const addClass = (element, className) => getClassList(element).add(className);
@@ -16,10 +17,6 @@ const toggleNavbar = () => {
 }
 
 export default function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState(() => null);
-  const modal = modalHandler(setModalContent, setModalOpen);
-
   return (
     <Router>
       <Head>
@@ -29,19 +26,29 @@ export default function App() {
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"/>
       </Head>
-      <div className="bg-black bg-opacity-90 text-white container-sm min-h-screen mx-auto relative py-2">
-        <AppHeader modalHandler={modal}/>
-        <div className="fixed -z-10 top-0 left-0 right-0 bg-transparent min-h-screen" id="app-overlay" onClick={toggleNavbar}>
-        </div>
-        <NavigationBar/>
-        <Modal isActive={modalOpen} closeHandler={modal.close}>
-          {modalContent}
-        </Modal>
-        <Switch>
-          <Route exact path="/home" component={Home}/>
-        </Switch>
-      </div>
+      <ModalProvider>
+        <AppContent/>
+      </ModalProvider>
     </Router>
+  );
+}
+
+function AppContent(props) {
+  const [modalHandler, modalOpen, modalContent] = useContext(ModalContext);
+
+  return (
+    <div className="bg-black bg-opacity-90 text-white container-sm min-h-screen mx-auto relative">
+          <AppHeader modalHandler={modalHandler}/>
+          <div className="fixed -z-10 top-0 left-0 right-0 bg-transparent min-h-screen" id="app-overlay" onClick={toggleNavbar}>
+          </div>
+          <NavigationBar/>
+          <Modal isActive={modalOpen} closeHandler={modalHandler.close}>
+            {modalContent}
+          </Modal>
+          <Switch>
+            <Route exact path="/home" component={Home}/>
+          </Switch>
+        </div>
   );
 }
 

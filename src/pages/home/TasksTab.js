@@ -1,78 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   MaterialDropDown,
   MaterialCounter,
 } from "../../components/material/Material";
-import { Modal, modalHandler } from "../../components/Modal";
+import { ModalContext } from "../../contexts/ModalContext";
 import Image from "next/image";
+import { ResinContext } from "../../contexts/ResinContext";
+import { tasks } from "../../models/Tasks";
 
 function TasksTab(props) {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState(() => null);
-  const modal = modalHandler(setModalContent, setModalOpen);
+  const tasksList = tasks;
 
-  const tasksList = [
-    {
-      name: "Cecilia Garden",
-      type: "Domain",
-      level: "Level 4",
-      levels: ["Level 1", "Level 2", "Level 3", "Level 4"],
-      cost: 20,
-      rewards: [
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 2, max: 3 },
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 0, max: 3 },
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 0, max: 3 },
-      ],
-      runs: 3,
-    },
-    {
-      name: "Hidden Palace",
-      type: "Domain",
-      level: "Level 4",
-      levels: ["Level 1", "Level 2", "Level 3", "Level 4"],
-      cost: 20,
-      rewards: [
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 2, max: 3 },
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 0, max: 3 },
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 0, max: 3 },
-      ],
-      runs: 2,
-    },
-    {
-      name: "Cryo Hypostasis",
-      type: "World Boss",
-      level: "Level 8",
-      levels: [
-        "Level 0",
-        "Level 1",
-        "Level 2",
-        "Level 3",
-        "Level 4",
-        "Level 5",
-        "Level 6",
-        "Level 7",
-        "Level 8",
-      ],
-      cost: 40,
-      rewards: [
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 2, max: 3 },
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 0, max: 3 },
-        { img: "/assets/img/Item_Philosophies_of_Ballad.webp", min: 0, max: 3 },
-      ],
-      runs: 2,
-    },
-  ];
-
-  return [
+  return (
     <div className={`flex flex-col${props.isActive ? "" : " hidden"}`}>
       {tasksList.map((task) => (
-        <TaskCard task={task} modalHandler={modal} />
+        <TaskCard task={task}/>
       ))}
-    </div>,
-    <Modal isActive={modalOpen} closeHandler={modal.close}>
-      {modalContent}
-    </Modal>,
-  ];
+    </div>
+  );
 }
 
 function ConsumeResinModal(props) {
@@ -86,7 +31,7 @@ function ConsumeResinModal(props) {
       value: 2,
     },
   ];
-
+  
   const [costs, setCosts] = useState(props.cost);
   const [done, setDone] = useState(1);
   const handleDone = (done) => {
@@ -124,7 +69,7 @@ function ConsumeResinModal(props) {
           <div className="h-20">
             Original Resin:
             <div className="mt-1">
-              <span className="font-semibold text-3xl text-primary">{resinSource[0].value}</span>{" "}
+              <span className="font-semibold text-3xl text-primary">{props.currentResin}</span>{" "}
               <span className="text-danger">{`(-${costs})`}</span>
             </div>
           </div>
@@ -148,12 +93,14 @@ function TaskCard(props) {
       };
     });
   };
-  const modalHandler = props.modalHandler;
+  
+  const [currentResin, setCurrentResin] = useContext(ResinContext);
+  const [modalHandler] = useContext(ModalContext);
 
   const task = props.task;
   const [expanded, setExpanded] = useState(false);
   const [rewards, setRewards] = useState(
-    calculateRewards(task.rewards, task.runs)
+    calculateRewards(task.rewards[task.level], task.runs)
   );
   const [runs, setRuns] = useState(task.runs);
   const [totalCosts, setTotalCosts] = useState(task.runs * task.cost);
@@ -166,7 +113,7 @@ function TaskCard(props) {
   const handleRuns = (runs) => {
     setRuns(runs);
     setTotalCosts(runs * task.cost);
-    setRewards(calculateRewards(task.rewards, runs));
+    setRewards(calculateRewards(task.rewards[level], runs));
   };
 
   const CardHeader = () => (
@@ -175,7 +122,7 @@ function TaskCard(props) {
         className="w-4 h-4 border border-primary rounded-full mr-2"
         onClick={() =>
           modalHandler.open(
-            <ConsumeResinModal cost={task.cost} runs={task.runs} />
+            <ConsumeResinModal cost={task.cost} runs={task.runs} currentResin={currentResin} />
           )
         }
       ></div>
@@ -204,14 +151,16 @@ function TaskCard(props) {
 
   const RewardsContent = () =>
     rewards.map((reward, index) => (
-      <div className="flex items-center mr-2"
+      <div className="flex items-center"
       key={`reward-${index}`}>
-        <Image
-          className="mr-1"
-          src={reward.img}
-          width={32}
-          height={32}
-        />
+        <div className="mr-1 relative w-8" style={{height:'32px'}}>
+          <Image
+            src={reward.img}
+            alt="reward"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         {reward.count}
       </div>
     ));
@@ -222,22 +171,21 @@ function TaskCard(props) {
         expanded ? "flex" : "hidden"
       }`}
     >
-      <div className="flex flex-col mr-8">
+      <div className="mr-8">
         <div className="h-16">
-          {task.type === "Domain" ? "Domain" : "World"} Level:
+          {task.type.includes("Domain") ? "Domain" : "World"} Level:
           <div className="mt-1">
-            <MaterialDropDown activeMenu={level} menus={task.levels} />
+            <MaterialDropDown activeMenu={`Level ${level + 1}`} menus={task.levels} />
           </div>
         </div>
         <div className="mt-2">
           Cost per run:
           <div className="flex items-center font-medium text-base text-primary mt-1">
-            <div className="w-4 mr-1">
+            <div className="relative w-4 h-4 mr-1">
               <Image
                 src="/assets/img/Item_Fragile_Resin.png"
-                width="100%"
-                height="auto"
-                layout="responsive"
+                alt="resin"
+                layout="fill"
                 objectFit="contain"
               />
             </div>
@@ -245,10 +193,10 @@ function TaskCard(props) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col">
-        <div className="flex flex-col h-16">
-          Rewards:
-          <div className="mt-1 flex overflow-auto text-primary">
+      <div>
+        <div className="h-16">
+          <div>Rewards:</div>
+          <div className="mt-1 flex w-20 overflow-auto text-primary gap-x-2 justify-start scrollbar-hide" style={{width:'150px'}}>
             <RewardsContent />
           </div>
         </div>
