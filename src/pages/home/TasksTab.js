@@ -167,12 +167,12 @@ function TaskCard(props) {
 
   const ExpandedMenu = (expanded) => (
     <div
-      className={`pl-7 pb-3 text-xs text-white text-opacity-60 ${
+      className={`pl-7 pr-2 pb-3 text-xs text-white text-opacity-60 ${
         expanded ? "flex" : "hidden"
       }`}
     >
-      <div className="mr-8">
-        <div className="h-16">
+      <div className="flex-1 mr-8">
+        <div className="h-16" style={{maxWidth:'100px'}}>
           {task.type.includes("Domain") ? "Domain" : "World"} Level:
           <div className="mt-1">
             <MaterialDropDown activeMenu={`Level ${level + 1}`} menus={task.levels} />
@@ -193,10 +193,10 @@ function TaskCard(props) {
           </div>
         </div>
       </div>
-      <div>
+      <div className="overflow-hidden" style={{maxWidth:'57%'}}>
         <div className="h-16">
           <div>Rewards:</div>
-          <div className="mt-1 flex w-20 overflow-auto text-primary gap-x-2 justify-start scrollbar-hide" style={{width:'150px'}}>
+          <div className="mt-1 flex overflow-auto text-primary gap-x-2 justify-start scrollbar-hide" style={{minWidth:'100px'}}>
             <RewardsContent />
           </div>
         </div>
