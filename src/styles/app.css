@@ -16,9 +16,9 @@
 .modal {
   top: 0;
   left: 0;
+  right: 0;
   position: fixed;
   z-index: -1;
-  width: 411px;
   height: 100vh;
 }
 
@@ -29,10 +29,10 @@
 }
 
 .modal-content {
-  top: 64px;
-  left: 24px;
-  right: 24px;
-  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
   z-index: -1;
   opacity: 0;
 }

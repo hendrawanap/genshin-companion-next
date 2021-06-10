@@ -3,8 +3,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Head from "next/head";
 import Image from 'next/image';
 import Home from './home/index';
-import { Modal, modalHandler } from "../components/Modal";
-import { ModalContext, ModalProvider } from "../contexts/ModalContext";
+// import { Modal, modalHandler } from "../components/Modal";
+import { Modal } from "../components/Modal";
+// import { ModalContext, ModalProvider } from "../contexts/ModalContext";
+import { ResinProvider } from "../contexts/ResinContext";
+import ResinManager from "./resin-manager";
 
 const getClassList = element => document.getElementById(element).classList;
 const addClass = (element, className) => getClassList(element).add(className);
@@ -17,6 +20,13 @@ const toggleNavbar = () => {
 }
 
 export default function App() {
+  const fetchHello = async () => {
+    const response = await fetch('http://localhost:3000/api/hello');
+    const data = await response.json();
+    console.log(data);
+  }
+
+  fetchHello();
   return (
     <Router>
       <Head>
@@ -26,33 +36,40 @@ export default function App() {
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"/>
       </Head>
-      <ModalProvider>
-        <AppContent/>
-      </ModalProvider>
+      <ResinProvider>
+        {/* <ModalProvider> */}
+          <AppContent/>
+        {/* </ModalProvider> */}
+      </ResinProvider>
+      <div id="portal-1"></div>
+      <div id="portal-2"></div>
     </Router>
   );
 }
 
 function AppContent(props) {
-  const [modalHandler, modalOpen, modalContent] = useContext(ModalContext);
+  // const [modalHandler, modalOpen, modalContent] = useContext(ModalContext);
 
   return (
     <div className="bg-black bg-opacity-90 text-white container-sm min-h-screen mx-auto relative">
-          <AppHeader modalHandler={modalHandler}/>
-          <div className="fixed -z-10 top-0 left-0 right-0 bg-transparent min-h-screen" id="app-overlay" onClick={toggleNavbar}>
-          </div>
-          <NavigationBar/>
-          <Modal isActive={modalOpen} closeHandler={modalHandler.close}>
-            {modalContent}
-          </Modal>
-          <Switch>
-            <Route exact path="/home" component={Home}/>
-          </Switch>
-        </div>
+      <AppHeader/>
+      {/* <AppHeader modalHandler={modalHandler}/> */}
+      <div className="fixed -z-10 top-0 left-0 right-0 bg-transparent min-h-screen" id="app-overlay" onClick={toggleNavbar}>
+      </div>
+      <NavigationBar/>
+      {/* <Modal isActive={modalOpen} closeHandler={modalHandler.close}>
+        {modalContent}
+      </Modal> */}
+      <Switch>
+        <Route exact path="/home" component={Home}/>
+        <Route exact path="/resin-manager" component={ ResinManager }/>
+      </Switch>
+    </div>
   );
 }
 
 function AppHeader(props) {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <header className='flex h-14 items-center justify-between px-3 bg-navbar fixed z-30 top-0 left-0 right-0'>
       <button
@@ -62,13 +79,16 @@ function AppHeader(props) {
       >
         menu
       </button>
-      <Link to="/home"><Image src="/assets/img/Logo.png" height={36} width={116} /></Link>
+      <Link to="/home"><div className="relative" style={{height: '36px', width: '120px'}}><Image src="/assets/img/Logo.png" layout="fill" objectFit="contain" quality={100}/></div></Link>
       <img
         className="w-8 rounded-full"
         src="https://img-os-static.hoyolab.com/communityWeb/upload/cb31fe8dae809ebdbc72039cba527501.png"
         alt="Profile"
-        onClick={() => props.modalHandler.open(<AccountsModal modalHandler={props.modalHandler}/>)}
+        onClick={() => setOpenModal(true)}
       />
+      <Modal isFull= {false} isOpen={openModal} closeHandler={() => setOpenModal(false)}>
+        <AccountsModal closeHandler={() => setOpenModal(false)}/>
+      </Modal>
     </header>
   );
 }
@@ -87,9 +107,9 @@ function NavigationBar() {
         <Image className="ml-8 mb-6" src="/assets/img/Logo.png" height={36} width={116}/>
         <ul className="nav-list">
           {
-            nav_list.map((nav_item) => (
-              <li className="nav-item">
-                <Link key={nav_item.id} class="flex py-2 text-white text-opacity-60" id={`link-${nav_item.id}`} to={nav_item.to} onClick={toggleNavbar}>
+            nav_list.map((nav_item, index) => (
+              <li className="nav-item" key={`nav-${index}`}>
+                <Link key={nav_item.id} className="flex py-2 text-white text-opacity-60" id={`link-${nav_item.id}`} to={nav_item.to} onClick={toggleNavbar}>
                   <span className="material-icons mr-6">{nav_item.icon}</span><span>{nav_item.name}</span>
                 </Link>
               </li>
@@ -107,8 +127,8 @@ function NavigationBar() {
 function AccountsModal(props) {
   return (
     <div className="bg-navbar p-4 rounded-md" id="accounts-modal">
-      <div className="flex items-center mb-3 text-lg">
-        <button className="material-icons mr-8" id="accounts-close" onClick={() => props.modalHandler.close()}>close</button>
+      <div className="flex items-center mb-3 text-lg text-white text-opacity-80">
+        <button className="material-icons mr-8" id="accounts-close" onClick={props.closeHandler}>close</button>
         Accounts
       </div>
       <AccountsModalContent/>
@@ -138,14 +158,14 @@ function AccountsModalContent(props) {
           isCurrent={true}
           handleExpand={() => setIsExpanded(!isExpanded)}
       /> }
-      <button className="border border-white border-opacity-30 rounded-full px-3 py-1 ml-14 font-medium tracking-wide text-sm text-white text-opacity-60" id="manage-account">Manage this account</button>
+      <button className="border border-white border-opacity-30 rounded-full px-3 py-1 ml-14 font-medium tracking-wide text-sm text-white text-opacity-60 whitespace-nowrap" id="manage-account">Manage this account</button>
       { isExpanded ? 
-        [
-          <div className="mt-4 ml-14 border-b border-white border-opacity-30"></div>,
-          accounts.filter(account => account.nickname !== currentAccount.nickname)
-          .map(account => <Account key={account.nickname} account={account}/>),
-          accountsMenus.map(menu => <div key={menu.icon} className="flex items-center pl-2 py-3 text-white text-opacity-60"><span className="mr-5 material-icons">{menu.icon}</span>{menu.inner}</div>)
-        ] : ''
+        <>
+          <div className="mt-4 ml-14 border-b border-white border-opacity-30"></div>
+          { accounts.filter(account => account.nickname !== currentAccount.nickname)
+            .map(account => <Account key={account.nickname} account={account}/>) }
+          { accountsMenus.map(menu => <div key={menu.icon} className="flex items-center pl-2 py-3 text-white text-opacity-60"><span className="mr-5 material-icons">{menu.icon}</span>{menu.inner}</div>) }
+        </> : ''
       }
     </div>
   )

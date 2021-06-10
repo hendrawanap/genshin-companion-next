@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Dead Ley Line Branch",
+    "rarity": 2,
+    "droppedBy": "Abyss Mages",
+    "series": "Ley Lines",
+    "img": "assets\/img\/elite-materials\/Item_Dead_Ley_Line_Branch.webp"
+  },
+  {
+    "name": "Dead Ley Line Leaves",
+    "rarity": 3,
+    "droppedBy": "Abyss Mages",
+    "series": "Ley Lines",
+    "img": "assets\/img\/elite-materials\/Item_Dead_Ley_Line_Leaves.webp"
+  },
+  {
+    "name": "Ley Line Sprouts",
+    "rarity": 4,
+    "droppedBy": "Abyss Mages",
+    "series": "Ley Lines",
+    "img": "assets\/img\/elite-materials\/Item_Ley_Line_Sprouts.webp"
+  },
+  {
+    "name": "Chaos Circuit",
+    "rarity": 3,
+    "droppedBy": "Automatons",
+    "series": "Chaos Parts",
+    "img": "assets\/img\/elite-materials\/Item_Chaos_Circuit.webp"
+  },
+  {
+    "name": "Chaos Core",
+    "rarity": 4,
+    "droppedBy": "Automatons",
+    "series": "Chaos Parts",
+    "img": "assets\/img\/elite-materials\/Item_Chaos_Core.webp"
+  },
+  {
+    "name": "Chaos Device",
+    "rarity": 2,
+    "droppedBy": "Automatons",
+    "series": "Chaos Parts",
+    "img": "assets\/img\/elite-materials\/Item_Chaos_Device.webp"
+  },
+  {
+    "name": "Agent's Sacrificial Knife",
+    "rarity": 3,
+    "droppedBy": "Fatui Agents",
+    "series": "Sacrificial Knifes",
+    "img": "assets\/img\/elite-materials\/Item_Agent's_Sacrificial_Knife.webp"
+  },
+  {
+    "name": "Hunter's Sacrificial Knife",
+    "rarity": 2,
+    "droppedBy": "Fatui Agents",
+    "series": "Sacrificial Knifes",
+    "img": "assets\/img\/elite-materials\/Item_Hunter's_Sacrificial_Knife.webp"
+  },
+  {
+    "name": "Inspector's Sacrificial Knife",
+    "rarity": 4,
+    "droppedBy": "Fatui Agents",
+    "series": "Sacrificial Knifes",
+    "img": "assets\/img\/elite-materials\/Item_Inspector's_Sacrificial_Knife.webp"
+  },
+  {
+    "name": "Mist Grass",
+    "rarity": 3,
+    "droppedBy": "Fatui Cicin Mages",
+    "series": "Mist Grass",
+    "img": "assets\/img\/elite-materials\/Item_Mist_Grass.webp"
+  },
+  {
+    "name": "Mist Grass Pollen",
+    "rarity": 2,
+    "droppedBy": "Fatui Cicin Mages",
+    "series": "Mist Grass",
+    "img": "assets\/img\/elite-materials\/Item_Mist_Grass_Pollen.webp"
+  },
+  {
+    "name": "Mist Grass Wick",
+    "rarity": 4,
+    "droppedBy": "Fatui Cicin Mages",
+    "series": "Mist Grass",
+    "img": "assets\/img\/elite-materials\/Item_Mist_Grass_Wick.webp"
+  },
+  {
+    "name": "Fossilized Bone Shard",
+    "rarity": 4,
+    "droppedBy": "Geovishaps",
+    "series": "Bone Shards",
+    "img": "assets\/img\/elite-materials\/Item_Fossilized_Bone_Shard.webp"
+  },
+  {
+    "name": "Fragile Bone Shard",
+    "rarity": 2,
+    "droppedBy": "Geovishaps",
+    "series": "Bone Shards",
+    "img": "assets\/img\/elite-materials\/Item_Fragile_Bone_Shard.webp"
+  },
+  {
+    "name": "Sturdy Bone Shard",
+    "rarity": 3,
+    "droppedBy": "Geovishaps",
+    "series": "Bone Shards",
+    "img": "assets\/img\/elite-materials\/Item_Sturdy_Bone_Shard.webp"
+  },
+  {
+    "name": "Black Bronze Horn",
+    "rarity": 3,
+    "droppedBy": "Mitachurls",
+    "series": "Hilichurl Horns",
+    "img": "assets\/img\/elite-materials\/Item_Black_Bronze_Horn.webp"
+  },
+  {
+    "name": "Black Crystal Horn",
+    "rarity": 4,
+    "droppedBy": "Mitachurls",
+    "series": "Hilichurl Horns",
+    "img": "assets\/img\/elite-materials\/Item_Black_Crystal_Horn.webp"
+  },
+  {
+    "name": "Heavy Horn",
+    "rarity": 2,
+    "droppedBy": "Mitachurls",
+    "series": "Hilichurl Horns",
+    "img": "assets\/img\/elite-materials\/Item_Heavy_Horn.webp"
+  }
+]

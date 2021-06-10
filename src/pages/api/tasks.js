@@ -570,3 +570,7 @@ export const talentTasks = [
     runs: 1,
   }
 ]
+
+export default (req, res) => {
+  res.status(200).json(tasks)
+}

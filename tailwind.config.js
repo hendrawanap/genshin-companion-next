@@ -1,5 +1,5 @@
 module.exports = {
-  mode:'jit',
+  // mode:'jit',
   purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -21,6 +21,15 @@ module.exports = {
         '-10': '-10',
         '-20': '-20',
         '-30': '-30'
+      },
+      minWidth: {
+        'xs': '20rem',
+        'sm': '24rem',
+        'md': '28rem',
+        'lg': '32rem',
+        'xl': '42rem',
+        '2xl': '48rem',
+        '3xl': '56rem',
       }
     },
   },

@@ -1,0 +1,149 @@
+[
+  {
+    "name": "Lieutenant's Insignia",
+    "rarity": 3,
+    "droppedBy": "Fatui",
+    "series": "Fatui Insignia",
+    "img": "assets\/img\/common-materials\/Item_Lieutenant's_Insignia.webp"
+  },
+  {
+    "name": "Recruit's Insignia",
+    "rarity": 1,
+    "droppedBy": "Fatui",
+    "series": "Fatui Insignia",
+    "img": "assets\/img\/common-materials\/Item_Recruit's_Insignia.webp"
+  },
+  {
+    "name": "Sergeant's Insignia",
+    "rarity": 2,
+    "droppedBy": "Fatui",
+    "series": "Fatui Insignia",
+    "img": "assets\/img\/common-materials\/Item_Sergeant's_Insignia.webp"
+  },
+  {
+    "name": "Firm Arrowhead",
+    "rarity": 1,
+    "droppedBy": "Hilichurl Shooter",
+    "series": "Hilichurl Arrowheads",
+    "img": "assets\/img\/common-materials\/Item_Firm_Arrowhead.webp"
+  },
+  {
+    "name": "Sharp Arrowhead",
+    "rarity": 2,
+    "droppedBy": "Hilichurl Shooter",
+    "series": "Hilichurl Arrowheads",
+    "img": "assets\/img\/common-materials\/Item_Sharp_Arrowhead.webp"
+  },
+  {
+    "name": "Weathered Arrowhead",
+    "rarity": 3,
+    "droppedBy": "Hilichurl Shooter",
+    "series": "Hilichurl Arrowheads",
+    "img": "assets\/img\/common-materials\/Item_Weathered_Arrowhead.webp"
+  },
+  {
+    "name": "Damaged Mask",
+    "rarity": 1,
+    "droppedBy": "Hilichurls",
+    "series": "Hilichurl Masks",
+    "img": "assets\/img\/common-materials\/Item_Damaged_Mask.webp"
+  },
+  {
+    "name": "Ominous Mask",
+    "rarity": 3,
+    "droppedBy": "Hilichurls",
+    "series": "Hilichurl Masks",
+    "img": "assets\/img\/common-materials\/Item_Ominous_Mask.webp"
+  },
+  {
+    "name": "Stained Mask",
+    "rarity": 2,
+    "droppedBy": "Hilichurls",
+    "series": "Hilichurl Masks",
+    "img": "assets\/img\/common-materials\/Item_Stained_Mask.webp"
+  },
+  {
+    "name": "Divining Scroll",
+    "rarity": 1,
+    "droppedBy": "Samachurls",
+    "series": "Samachurl Scrolls",
+    "img": "assets\/img\/common-materials\/Item_Divining_Scroll.webp"
+  },
+  {
+    "name": "Forbidden Curse Scroll",
+    "rarity": 3,
+    "droppedBy": "Samachurls",
+    "series": "Samachurl Scrolls",
+    "img": "assets\/img\/common-materials\/Item_Forbidden_Curse_Scroll.webp"
+  },
+  {
+    "name": "Sealed Scroll",
+    "rarity": 2,
+    "droppedBy": "Samachurls",
+    "series": "Samachurl Scrolls",
+    "img": "assets\/img\/common-materials\/Item_Sealed_Scroll.webp"
+  },
+  {
+    "name": "Slime Concentrate",
+    "rarity": 3,
+    "droppedBy": "Slimes",
+    "series": "Slime",
+    "img": "assets\/img\/common-materials\/Item_Slime_Concentrate.webp"
+  },
+  {
+    "name": "Slime Condensate",
+    "rarity": 1,
+    "droppedBy": "Slimes",
+    "series": "Slime",
+    "img": "assets\/img\/common-materials\/Item_Slime_Condensate.webp"
+  },
+  {
+    "name": "Slime Secretions",
+    "rarity": 2,
+    "droppedBy": "Slimes",
+    "series": "Slime",
+    "img": "assets\/img\/common-materials\/Item_Slime_Secretions.webp"
+  },
+  {
+    "name": "Golden Raven Insignia",
+    "rarity": 3,
+    "droppedBy": "Treasure Hoarders",
+    "series": "Treasure Hoarder Insignias",
+    "img": "assets\/img\/common-materials\/Item_Golden_Raven_Insignia.webp"
+  },
+  {
+    "name": "Silver Raven Insignia",
+    "rarity": 2,
+    "droppedBy": "Treasure Hoarders",
+    "series": "Treasure Hoarder Insignias",
+    "img": "assets\/img\/common-materials\/Item_Silver_Raven_Insignia.webp"
+  },
+  {
+    "name": "Treasure Hoarder Insignia",
+    "rarity": 1,
+    "droppedBy": "Treasure Hoarders",
+    "series": "Treasure Hoarder Insignias",
+    "img": "assets\/img\/common-materials\/Item_Treasure_Hoarder_Insignia.webp"
+  },
+  {
+    "name": "Whopperflower Nectar",
+    "rarity": 1,
+    "droppedBy": "Whopperflowers",
+    "series": "Whopperflower Nectar",
+    "img": "assets\/img\/common-materials\/Item_Whopperflower_Nectar.webp"
+  },
+  {
+    "name": "Energy Nectar",
+    "rarity": 3,
+    "droppedBy": "Whopperflowers",
+    "series": "Whopperflower Nectar",
+    "img": "assets\/img\/common-materials\/Item_Energy_Nectar.webp"
+  },
+  {
+    "name": "Shimmering Nectar",
+    "rarity": 2,
+    "droppedBy": "Whopperflowers",
+    "series": "Whopperflower Nectar",
+    "img": "assets\/img\/common-materials\/Item_Shimmering_Nectar.webp"
+  }
+]

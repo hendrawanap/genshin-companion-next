@@ -5,15 +5,13 @@ import TaskDetailList from "./TaskDetail";
 import { MaterialChip } from "../../components/material/Material";
 import { Link } from "react-router-dom";
 import Image from 'next/image';
-import { ResinProvider } from "../../contexts/ResinContext";
+import { todaysDomain } from "../../models/Tasks";
 
 function Home() {
   return (
     <div className="pt-14 py-2">
       <Welcome name="Tabibito" />
-      <ResinProvider>
-        <ResinTask/>
-      </ResinProvider>
+      <ResinTask/>
       <TodaysDomain />
     </div>
   );
@@ -60,7 +58,7 @@ function ResinTask(props) {
     </div>
   );
 }
-function Tabs(props) {
+export function Tabs(props) {
   const [activeTab, setActiveTab] = useState(props.activeTab);
   const handleTabClick = (event) => {
     setActiveTab(event.target.id);
@@ -69,8 +67,8 @@ function Tabs(props) {
   return (
     <div className="Tabs">
       <div className="flex justify-between mb-3">
-        <div className="flex">
-          {props.tabs.map((tab) => (
+        <div className="flex overflow-x-auto scrollbar-hide">
+          { props.tabs.map((tab) => (
             <MaterialChip
               title={tab.name}
               isActive={activeTab === tab.name}
@@ -82,25 +80,24 @@ function Tabs(props) {
         </div>
         {props.addOn}
       </div>
-      {props.tabs.map((tab) =>
-        tab.component({
+      { props.tabs.map((tab, index) => {
+        let tabProps = {
           ...tab.props,
-          ...{ isActive: activeTab === tab.name ? true : false },
-        })
-      )}
+          // ...{ isActive: activeTab === tab.name ? true : false }
+        };
+        return (
+          <div key={`tab-${index}`} className={`${activeTab === tab.name ? 'block' : 'hidden'}`}>
+            {tab.component(tabProps)}
+          </div>
+        );
+      })}
     </div>
   );
 }
 
 function TodaysDomain() {
-  const talents = [
-    { name: "Forsaken Rift", day: "Saturday" },
-    { name: "Taishan Mansion", day: "Saturday" },
-  ];
-  const weapon = [
-    { name: "Cecilia Garden", day: "Saturday" },
-    { name: "Hidden Palace", day: "Saturday" },
-  ];
+  const talents = todaysDomain.talent;
+  const weapon = todaysDomain.weapon;
   const tabs = [
     {
       name: "All",
