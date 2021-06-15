@@ -1,0 +1,17 @@
+.card-expand-enter {
+  opacity: 0;
+}
+
+.card-expand-enter-active {
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.card-expand-exit {
+  opacity: 1;
+}
+
+.card-expand-exit-active {
+  opacity: 0;
+  transition: all 300ms ease;
+}

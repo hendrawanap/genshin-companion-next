@@ -30,6 +30,9 @@ module.exports = {
         'xl': '42rem',
         '2xl': '48rem',
         '3xl': '56rem',
+      },
+      transitionProperty: {
+        'height': 'height',
       }
     },
   },

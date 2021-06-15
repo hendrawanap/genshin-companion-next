@@ -1,9 +1,9 @@
 import firebase from "../../../firebase/init";
 
-const characters = require("../../models/characters.json");
-const commonMaterials = require("../../models/commonMaterials.json");
-const eliteMaterials = require("../../models/eliteMaterials.json");
-const db = firebase();
+const characters = require("./json/characters.json");
+const commonMaterials = require("./json/commonMaterials.json");
+const eliteMaterials = require("./json/eliteMaterials.json");
+const db = firebase.firestore();
 
 function camelCase(str) {
   return str

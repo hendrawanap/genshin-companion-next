@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Brilliant Diamond Sliver",
+    "element": "Traveler",
+    "series": "Brilliant Diamond",
+    "rarity": 2,
+    "img": "assets/img/ascension-gems/Item_Brilliant_Diamond_Sliver.webp"
+  },
+  {
+    "name": "Brilliant Diamond Fragment",
+    "element": "Traveler",
+    "series": "Brilliant Diamond",
+    "rarity": 3,
+    "img": "assets/img/ascension-gems/Item_Brilliant_Diamond_Fragment.webp"
+  },
+  {
+    "name": "Brilliant Diamond Chunk",
+    "element": "Traveler",
+    "series": "Brilliant Diamond",
+    "rarity": 4,
+    "img": "assets/img/ascension-gems/Item_Brilliant_Diamond_Chunk.webp"
+  },
+  {
+    "name": "Brilliant Diamond Gemstone",
+    "element": "Traveler",
+    "series": "Brilliant Diamond",
+    "rarity": 5,
+    "img": "assets/img/ascension-gems/Item_Brilliant_Diamond_Gemstone.webp"
+  },
+  {
+    "name": "Vayuda Turquoise Sliver",
+    "element": "Anemo",
+    "series": "Vayuda Turquoise",
+    "rarity": 2,
+    "img": "assets/img/ascension-gems/Item_Vayuda_Turquoise_Sliver.webp"
+  },
+  {
+    "name": "Vayuda Turquoise Fragment",
+    "element": "Anemo",
+    "series": "Vayuda Turquoise",
+    "rarity": 3,
+    "img": "assets/img/ascension-gems/Item_Vayuda_Turquoise_Fragment.webp"
+  },
+  {
+    "name": "Vayuda Turquoise Chunk",
+    "element": "Anemo",
+    "series": "Vayuda Turquoise",
+    "rarity": 4,
+    "img": "assets/img/ascension-gems/Item_Vayuda_Turquoise_Chunk.webp"
+  },
+  {
+    "name": "Vayuda Turquoise Gemstone",
+    "element": "Anemo",
+    "series": "Vayuda Turquoise",
+    "rarity": 5,
+    "img": "assets/img/ascension-gems/Item_Vayuda_Turquoise_Gemstone.webp"
+  },
+  {
+    "name": "Shivada Jade Sliver",
+    "element": "Cryo",
+    "series": "Shivada Jade",
+    "rarity": 2,
+    "img": "assets/img/ascension-gems/Item_Shivada_Jade_Sliver.webp"
+  },
+  {
+    "name": "Shivada Jade Fragment",
+    "element": "Cryo",
+    "series": "Shivada Jade",
+    "rarity": 3,
+    "img": "assets/img/ascension-gems/Item_Shivada_Jade_Fragment.webp"
+  },
+  {
+    "name": "Shivada Jade Chunk",
+    "element": "Cryo",
+    "series": "Shivada Jade",
+    "rarity": 4,
+    "img": "assets/img/ascension-gems/Item_Shivada_Jade_Chunk.webp"
+  },
+  {
+    "name": "Shivada Jade Gemstone",
+    "element": "Cryo",
+    "series": "Shivada Jade",
+    "rarity": 5,
+    "img": "assets/img/ascension-gems/Item_Shivada_Jade_Gemstone.webp"
+  },
+  {
+    "name": "Vajrada Amethyst Sliver",
+    "element": "Electro",
+    "series": "Vajrada Amethyst",
+    "rarity": 2,
+    "img": "assets/img/ascension-gems/Item_Vajrada_Amethyst_Sliver.webp"
+  },
+  {
+    "name": "Vajrada Amethyst Fragment",
+    "element": "Electro",
+    "series": "Vajrada Amethyst",
+    "rarity": 3,
+    "img": "assets/img/ascension-gems/Item_Vajrada_Amethyst_Fragment.webp"
+  },
+  {
+    "name": "Vajrada Amethyst Chunk",
+    "element": "Electro",
+    "series": "Vajrada Amethyst",
+    "rarity": 4,
+    "img": "assets/img/ascension-gems/Item_Vajrada_Amethyst_Chunk.webp"
+  },
+  {
+    "name": "Vajrada Amethyst Gemstone",
+    "element": "Electro",
+    "series": "Vajrada Amethyst",
+    "rarity": 5,
+    "img": "assets/img/ascension-gems/Item_Vajrada_Amethyst_Gemstone.webp"
+  },
+  {
+    "name": "Prithiva Topaz Sliver",
+    "element": "Geo",
+    "series": "Prithiva Topaz",
+    "rarity": 2,
+    "img": "assets/img/ascension-gems/Item_Prithiva_Topaz_Sliver.webp"
+  },
+  {
+    "name": "Prithiva Topaz Fragment",
+    "element": "Geo",
+    "series": "Prithiva Topaz",
+    "rarity": 3,
+    "img": "assets/img/ascension-gems/Item_Prithiva_Topaz_Fragment.webp"
+  },
+  {
+    "name": "Prithiva Topaz Chunk",
+    "element": "Geo",
+    "series": "Prithiva Topaz",
+    "rarity": 4,
+    "img": "assets/img/ascension-gems/Item_Prithiva_Topaz_Chunk.webp"
+  },
+  {
+    "name": "Prithiva Topaz Gemstone",
+    "element": "Geo",
+    "series": "Prithiva Topaz",
+    "rarity": 5,
+    "img": "assets/img/ascension-gems/Item_Prithiva_Topaz_Gemstone.webp"
+  },
+  {
+    "name": "Varunada Lazurite Sliver",
+    "element": "Hydro",
+    "series": "Varunada Lazurite",
+    "rarity": 2,
+    "img": "assets/img/ascension-gems/Item_Varunada_Lazurite_Sliver.webp"
+  },
+  {
+    "name": "Varunada Lazurite Fragment",
+    "element": "Hydro",
+    "series": "Varunada Lazurite",
+    "rarity": 3,
+    "img": "assets/img/ascension-gems/Item_Varunada_Lazurite_Fragment.webp"
+  },
+  {
+    "name": "Varunada Lazurite Chunk",
+    "element": "Hydro",
+    "series": "Varunada Lazurite",
+    "rarity": 4,
+    "img": "assets/img/ascension-gems/Item_Varunada_Lazurite_Chunk.webp"
+  },
+  {
+    "name": "Varunada Lazurite Gemstone",
+    "element": "Hydro",
+    "series": "Varunada Lazurite",
+    "rarity": 5,
+    "img": "assets/img/ascension-gems/Item_Varunada_Lazurite_Gemstone.webp"
+  },
+  {
+    "name": "Agnidus Agate Sliver",
+    "element": "Pyro",
+    "series": "Agnidus Agate",
+    "rarity": 2,
+    "img": "assets/img/ascension-gems/Item_Agnidus_Agate_Sliver.webp"
+  },
+  {
+    "name": "Agnidus Agate Fragment",
+    "element": "Pyro",
+    "series": "Agnidus Agate",
+    "rarity": 3,
+    "img": "assets/img/ascension-gems/Item_Agnidus_Agate_Fragment.webp"
+  },
+  {
+    "name": "Agnidus Agate Chunk",
+    "element": "Pyro",
+    "series": "Agnidus Agate",
+    "rarity": 4,
+    "img": "assets/img/ascension-gems/Item_Agnidus_Agate_Chunk.webp"
+  },
+  {
+    "name": "Agnidus Agate Gemstone",
+    "element": "Pyro",
+    "series": "Agnidus Agate",
+    "rarity": 5,
+    "img": "assets/img/ascension-gems/Item_Agnidus_Agate_Gemstone.webp"
+  }
+]

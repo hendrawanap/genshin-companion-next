@@ -1,0 +1,380 @@
+[
+  {
+    "name": "Cecilia Garden",
+    "type": "Domains of Forgery",
+    "cost": 20,
+    "region": "Mondstadt",
+    "subDomains": {
+      "cityOfRefections": {
+        "name": "City of Reflections",
+        "days": [
+          "Monday",
+          "Thursday",
+          "Sunday"
+        ],
+        "series": "Decarabian's"
+      },
+      "submergedValley": {
+        "name": "Submerged Valley",
+        "days": [
+          "Tuesday",
+          "Friday",
+          "Sunday"
+        ],
+        "series": "Boreal Wolf's"
+      },
+      "ruinsOfThirstingCapital": {
+        "name": "Ruins of Thirsting Capital",
+        "days": [
+          "Wednesday",
+          "Saturday",
+          "Sunday"
+        ],
+        "series": "Dandelion Gladiator"
+      }
+    }
+  },
+  {
+    "name": "Hidden Palace of Lianshan Formula",
+    "type": "Domains of Forgery",
+    "cost": 20,
+    "region": "Liyue",
+    "subDomains": {
+      "thundercloud": {
+        "name": "Thundercloud",
+        "days": [
+          "Monday",
+          "Thursday",
+          "Sunday"
+        ],
+        "series": "Guyun"
+      },
+      "thunderingRuins": {
+        "name": "Thundering Ruins",
+        "days": [
+          "Tuesday",
+          "Friday",
+          "Sunday"
+        ],
+        "series": "Mist Veiled Elixir"
+      },
+      "trialGroundsOfThunder": {
+        "name": "Trial Grounds of Thunder",
+        "days": [
+          "Wednesday",
+          "Saturday",
+          "Sunday"
+        ],
+        "series": "Aerosiderite"
+      }
+    }
+  },
+  {
+    "name": "Forsaken Rift",
+    "type": "Domains of Mastery",
+    "cost": 20,
+    "region": "Mondstadt",
+    "subDomains": {
+      "frostedAltar": {
+        "name": "Frosted Altar",
+        "days": [
+          "Monday",
+          "Thursday",
+          "Sunday"
+        ],
+        "series": "Freedom"
+      },
+      "frozenAbyss": {
+        "name": "Frozen Abyss",
+        "days": [
+          "Tuesday",
+          "Friday",
+          "Sunday"
+        ],
+        "series": "Resistance"
+      },
+      "realmOfSlumber": {
+        "name": "Realm of Slumber",
+        "days": [
+          "Wednesday",
+          "Saturday",
+          "Sunday"
+        ],
+        "series": "Ballad"
+      }
+    }
+  },
+  {
+    "name": "Taishan Mansion",
+    "type": "Domains of Mastery",
+    "cost": 20,
+    "region": "Liyue",
+    "subDomains": {
+      "altarOfFlames": {
+        "name": "Altar of Flames",
+        "days": [
+          "Monday",
+          "Thursday",
+          "Sunday"
+        ],
+        "series": "Prosperity"
+      },
+      "heartOfTheFlames": {
+        "name": "Heart of the Flames",
+        "days": [
+          "Tuesday",
+          "Friday",
+          "Sunday"
+        ],
+        "series": "Diligence"
+      },
+      "circleOfEmbers": {
+        "name": "Circle of Embers",
+        "days": [
+          "Wednesday",
+          "Saturday",
+          "Sunday"
+        ],
+        "series": "Gold"
+      }
+    }
+  },
+  {
+    "name": "Clear Pool and Mountain Cavern",
+    "type": "Domains of Blessing",
+    "cost": 20,
+    "region": "Liyue",
+    "rewards": {
+      "ar_35": [
+        "Gambler",
+        "Scholar",
+        "Bloodstained Chivalry",
+        "Noblesse Oblige"
+      ],
+      "ar_40": [
+        "Gambler",
+        "Scholar",
+        "Bloodstained Chivalry",
+        "Noblesse Oblige"
+      ],
+      "ar_45": [
+        "Gambler",
+        "Scholar",
+        "Bloodstained Chivalry",
+        "Noblesse Oblige"
+      ]
+    }
+  },
+  {
+    "name": "Domain of Guyun",
+    "type": "Domains of Blessing",
+    "cost": 20,
+    "region": "Liyue",
+    "rewards": {
+      "ar_22": [
+        "Lucky Dog",
+        "Brave Heart"
+      ],
+      "ar_25": [
+        "Lucky Dog",
+        "Brave Heart"
+      ],
+      "ar_30": [
+        "Lucky Dog",
+        "Brave Heart",
+        "Archaic Petra",
+        "Retracing Bolide"
+      ],
+      "ar_35": [
+        "Lucky Dog",
+        "Brave Heart",
+        "Archaic Petra",
+        "Retracing Bolide"
+      ],
+      "ar_40": [
+        "Lucky Dog",
+        "Brave Heart",
+        "Archaic Petra",
+        "Retracing Bolide"
+      ],
+      "ar_45": [
+        "Lucky Dog",
+        "Brave Heart",
+        "Archaic Petra",
+        "Retracing Bolide"
+      ]
+    }
+  },
+  {
+    "name": "Hidden Palace of Zhou Formula",
+    "type": "Domains of Blessing",
+    "cost": 20,
+    "region": "Liyue",
+    "rewards": {
+      "ar_30": [
+        "Defender's Will",
+        "Martial Artist",
+        "Set Crimson Witch of Flames",
+        "Lavawalker"
+      ],
+      "ar_35": [
+        "Defender's Will",
+        "Martial Artist",
+        "Set Crimson Witch of Flames",
+        "Lavawalker"
+      ],
+      "ar_40": [
+        "Defender's Will",
+        "Martial Artist",
+        "Set Crimson Witch of Flames",
+        "Lavawalker"
+      ],
+      "ar_45": [
+        "Defender's Will",
+        "Martial Artist",
+        "Set Crimson Witch of Flames",
+        "Lavawalker"
+      ]
+    }
+  },
+  {
+    "name": "Midsummer Courtyard",
+    "type": "Domains of Blessing",
+    "cost": 20,
+    "region": "Mondstadt",
+    "rewards": {
+      "ar_22": [
+        "Adventurer",
+        "Resolution of Sojourner"
+      ],
+      "ar_25": [
+        "Adventurer",
+        "Resolution of Sojourner"
+      ],
+      "ar_30": [
+        "Adventurer",
+        "Resolution of Sojourner",
+        "Thundering Fury",
+        "Thundersoother"
+      ],
+      "ar_35": [
+        "Adventurer",
+        "Resolution of Sojourner",
+        "Thundering Fury",
+        "Thundersoother"
+      ],
+      "ar_40": [
+        "Adventurer",
+        "Resolution of Sojourner",
+        "Thundering Fury",
+        "Thundersoother"
+      ],
+      "ar_45": [
+        "Adventurer",
+        "Resolution of Sojourner",
+        "Thundering Fury",
+        "Thundersoother"
+      ]
+    }
+  },
+  {
+    "name": "Peak of Vindagnyr",
+    "type": "Domains of Blessing",
+    "cost": 20,
+    "region": "Mondstadt",
+    "rewards": {
+      "ar_30": [
+        "Defender's Will",
+        "Gambler",
+        "Blizzard Strayer",
+        "Heart of Depth"
+      ],
+      "ar_35": [
+        "Defender's Will",
+        "Gambler",
+        "Blizzard Strayer",
+        "Heart of Depth"
+      ],
+      "ar_40": [
+        "Defender's Will",
+        "Gambler",
+        "Blizzard Strayer",
+        "Heart of Depth"
+      ],
+      "ar_45": [
+        "Defender's Will",
+        "Gambler",
+        "Blizzard Strayer",
+        "Heart of Depth"
+      ]
+    }
+  },
+  {
+    "name": "Ridge Watch",
+    "type": "Domains of Blessing",
+    "cost": 20,
+    "region": "Liyue",
+    "rewards": {
+      "ar_30": [
+        "Brave Heart",
+        "Martial Artist",
+        "Tenacity of the Millelith",
+        "Pale Flame"
+      ],
+      "ar_35": [
+        "Brave Heart",
+        "Martial Artist",
+        "Tenacity of the Millelith",
+        "Pale Flame"
+      ],
+      "ar_40": [
+        "Brave Heart",
+        "Martial Artist",
+        "Tenacity of the Millelith",
+        "Pale Flame"
+      ],
+      "ar_45": [
+        "Brave Heart",
+        "Martial Artist",
+        "Tenacity of the Millelith",
+        "Pale Flame"
+      ]
+    }
+  },
+  {
+    "name": "Valley of Remembrance",
+    "type": "Domains of Blessing",
+    "cost": 20,
+    "region": "Mondstadt",
+    "rewards": {
+      "ar_25": [
+        "Traveling Doctor",
+        "Tiny Miracle"
+      ],
+      "ar_30": [
+        "Traveling Doctor",
+        "Tiny Miracle",
+        "Viridescent Venerer",
+        "Maiden Beloved"
+      ],
+      "ar_35": [
+        "Traveling Doctor",
+        "Tiny Miracle",
+        "Viridescent Venerer",
+        "Maiden Beloved"
+      ],
+      "ar_40": [
+        "Traveling Doctor",
+        "Tiny Miracle",
+        "Viridescent Venerer",
+        "Maiden Beloved"
+      ],
+      "ar_45": [
+        "Traveling Doctor",
+        "Tiny Miracle",
+        "Viridescent Venerer",
+        "Maiden Beloved"
+      ]
+    }
+  }
+]

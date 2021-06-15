@@ -1,0 +1,301 @@
+[
+  {
+    "name": "Dvalin",
+    "type": "Trounce Domain",
+    "rewards": {
+      "ar_25": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment"
+        ],
+        "ascensionGems": [
+          "Vayuda Turquoise",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      },
+      "ar_30": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment"
+        ],
+        "ascensionGems": [
+          "Vayuda Turquoise",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      },
+      "ar_35": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk"
+        ],
+        "ascensionGems": [
+          "Vayuda Turquoise",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      },
+      "ar_40": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk"
+        ],
+        "ascensionGems": [
+          "Vayuda Turquoise",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      },
+      "ar_45": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Vayuda Turquoise",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      },
+      "ar_50": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Vayuda Turquoise",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Childe",
+    "type": "Trounce Domain",
+    "rewards": {
+      "ar_35": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      },
+      "ar_40": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      },
+      "ar_45": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      },
+      "ar_50": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Vajrada Amethyst",
+          "Varunada Lazurite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Azhdaha",
+    "type": "Trounce Domain",
+    "rewards": {
+      "ar_35": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk"
+        ],
+        "ascensionGems": [
+          "Vajrada Amethyst",
+          "Varunada Lazurite",
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "ar_40": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk"
+        ],
+        "ascensionGems": [
+          "Vajrada Amethyst",
+          "Varunada Lazurite",
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "ar_45": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Vajrada Amethyst",
+          "Varunada Lazurite",
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "ar_50": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Vajrada Amethyst",
+          "Varunada Lazurite",
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Andrius",
+    "type": "World Boss",
+    "rewards": {
+      "wl_1": {
+        "gemClasses": [
+          "Sliver"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "wl_2": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "wl_3": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "wl_4": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "wl_5": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "wl_6": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "wl_7": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      },
+      "wl_8": {
+        "gemClasses": [
+          "Sliver",
+          "Fragment",
+          "Chunk",
+          "Gemstone"
+        ],
+        "ascensionGems": [
+          "Shivada Jade",
+          "Prithiva Topaz",
+          "Agnidus Agate"
+        ]
+      }
+    }
+  }
+]

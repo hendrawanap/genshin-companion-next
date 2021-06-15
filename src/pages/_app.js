@@ -1,12 +1,15 @@
 import '../styles/globals.css'
-import '../styles/app.css'
+
+// function MyApp({ Component, pageProps }) {
+//   return (
+//     <div suppressHydrationWarning>
+//       {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+//     </div>
+//   )
+// }
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <div suppressHydrationWarning>
-      {typeof window === 'undefined' ? null : <Component {...pageProps} />}
-    </div>
-  )
+  return <Component {...pageProps} />
 }
 
 export default MyApp

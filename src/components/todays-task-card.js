@@ -1,17 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-function TaskDetailList(props) {
-  return (
-    <div className={`tracking-wider`}>
-      {props.tasks.map((task, index) => (
-        <TaskDetail name={task.name} day={task.day} rewards={task.rewards} key={`task-${index}`} />
-      ))}
-    </div>
-  );
-}
-
-function TaskDetail(props) {
+export default function TodaysTaskCard(props) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleClick = () => setIsExpanded(!isExpanded);
@@ -108,5 +98,3 @@ function TaskDetail(props) {
     </div>
   );
 }
-
-export default TaskDetailList;

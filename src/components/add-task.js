@@ -1,45 +1,38 @@
-import React, { useContext, useState } from "react";
-import { Tabs } from "../home/index";
-import { talentTasks, weaponTasks, outcropsTasks } from "../../models/Tasks";
-import { TaskCard } from "../home/TasksTab";
+import React, { useState } from "react";
+import Tabs from "@/components/tabs";
+import TaskCard from "@/components/task-card";
+import { talentTasks, weaponTasks, outcropsTasks } from "../models/Tasks";
 import Image from "next/image";
 
 export default function AddTask(props) {
   const tabs = [
     {
       name: "All",
-      component: (props) => TasksTab(props),
-      props: { tasks: talentTasks }
+      component: () => <TasksTab tasks={talentTasks}/>
     },
     {
       name: "Artefact",
-      component: (props) => TasksTab(props),
-      props: { tasks: talentTasks }
+      component: () => <TasksTab tasks={talentTasks}/>
     },
     {
       name: "Boss",
-      component: (props) => TasksTab(props),
-      props: { tasks: talentTasks }
+      component: () => <TasksTab tasks={talentTasks}/>
     },
     {
       name: "Talent",
-      component: (props) => TasksTab(props),
-      props: { tasks: talentTasks }
+      component: () => <TasksTab tasks={talentTasks}/>
     },
     {
       name: "Outcrops",
-      component: (props) => TasksTab(props),
-      props: { tasks: outcropsTasks }
+      component: () => <TasksTab tasks={outcropsTasks}/>
     },
     {
       name: "Weapon",
-      component: (props) => TasksTab(props),
-      props: { tasks: weaponTasks }
+      component: () => <TasksTab tasks={weaponTasks}/>
     },
     {
       name: "Weekly Boss",
-      component: (props) => TasksTab(props),
-      props: { tasks: talentTasks }
+      component: () => <TasksTab tasks={talentTasks}/>
     },
   ];
   const activeTab = "Talent";
@@ -69,9 +62,6 @@ export default function AddTask(props) {
       <Tabs tabs={tabs} activeTab={activeTab} />
     </div>
   );
-}
-
-function TasksTab(props) {
   function TaskCardContent(props) {
     const [expanded, setExpanded] = useState(false);
     const rewardsContent = (rewards) => {
@@ -165,10 +155,11 @@ function TasksTab(props) {
       </div>
     );
   }
-
-  return (
-    <div className={`flex flex-col`}>
-      {props.tasks.map((task, index) => <TaskCardContent task={task} key={`task-${index}`}/>)}
-    </div>
-  );
+  function TasksTab(props) {
+    return (
+      <div className={`flex flex-col`}>
+        {props.tasks.map((task, index) => <TaskCardContent task={task} key={`task-${index}`}/>)}
+      </div>
+    );
+  }
 }

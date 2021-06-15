@@ -12,7 +12,9 @@
     "commonMaterial": "Slime",
     "weeklyBossMaterial": "Tail of Boreas",
     "normalBossMaterial": "Hurricane Seed",
-    "localSpecialties": "Cecilia"
+    "localSpecialties": "Cecilia",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Venti.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Venti_Portrait.webp"
   },
   {
     "name": "Klee",
@@ -27,7 +29,9 @@
     "commonMaterial": "Samachurl Scrolls",
     "weeklyBossMaterial": "Ring of Boreas",
     "normalBossMaterial": "Everflame Seed",
-    "localSpecialties": "Philanemo Mushroom"
+    "localSpecialties": "Philanemo Mushroom",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Klee.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Klee_Portrait.webp"
   },
   {
     "name": "Diluc",
@@ -42,7 +46,9 @@
     "commonMaterial": "Fatui Insignia",
     "weeklyBossMaterial": "Dvalin's Plume",
     "normalBossMaterial": "Everflame Seed",
-    "localSpecialties": "Small Lamp Grass"
+    "localSpecialties": "Small Lamp Grass",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Diluc.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Diluc_Portrait.webp"
   },
   {
     "name": "Xingqiu",
@@ -57,7 +63,9 @@
     "commonMaterial": "Hilichurl Masks",
     "weeklyBossMaterial": "Tail of Boreas",
     "normalBossMaterial": "Cleansing Heart",
-    "localSpecialties": "Silk Flower"
+    "localSpecialties": "Silk Flower",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Xingqiu.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Xingqiu_Portrait.webp"
   },
   {
     "name": "Noelle",
@@ -72,7 +80,9 @@
     "commonMaterial": "Hilichurl Masks",
     "weeklyBossMaterial": "Dvalin's Claw",
     "normalBossMaterial": "Basalt Pillar",
-    "localSpecialties": "Valberry"
+    "localSpecialties": "Valberry",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Noelle.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Noelle_Portrait.webp"
   },
   {
     "name": "Jean",
@@ -87,7 +97,9 @@
     "commonMaterial": "Hilichurl Masks",
     "weeklyBossMaterial": "Dvalin's Plume",
     "normalBossMaterial": "Hurricane Seed",
-    "localSpecialties": "Dandelion Seed"
+    "localSpecialties": "Dandelion Seed",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Jean.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Jean_Portrait.webp"
   },
   {
     "name": "Chongyun",
@@ -102,7 +114,9 @@
     "commonMaterial": "Hilichurl Masks",
     "weeklyBossMaterial": "Dvalin's Sigh",
     "normalBossMaterial": "Hoarfrost Core",
-    "localSpecialties": "Cor Lapis"
+    "localSpecialties": "Cor Lapis",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Chongyun.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Chongyun_Portrait.webp"
   },
   {
     "name": "Kaeya",
@@ -117,7 +131,9 @@
     "commonMaterial": "Treasure Hoarder Insignias",
     "weeklyBossMaterial": "Spirit Locket of Boreas",
     "normalBossMaterial": "Hoarfrost Core",
-    "localSpecialties": "Calla Lily"
+    "localSpecialties": "Calla Lily",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Kaeya.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Kaeya_Portrait.webp"
   },
   {
     "name": "Albedo",
@@ -132,7 +148,9 @@
     "commonMaterial": "Samachurl Scrolls",
     "weeklyBossMaterial": "Tusk of Monoceros Caeli",
     "normalBossMaterial": "Basalt Pillar",
-    "localSpecialties": "Cecilia"
+    "localSpecialties": "Cecilia",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Albedo.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Albedo_Portrait.webp"
   },
   {
     "name": "Eula",
@@ -147,7 +165,9 @@
     "commonMaterial": "Hilichurl Masks",
     "weeklyBossMaterial": "Dragon Lord's Crown",
     "normalBossMaterial": "Crystalline Bloom",
-    "localSpecialties": "Dandelion Seed"
+    "localSpecialties": "Dandelion Seed",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Eula.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Eula_Portrait.webp"
   },
   {
     "name": "Lisa",
@@ -162,7 +182,9 @@
     "commonMaterial": "Slime",
     "weeklyBossMaterial": "Dvalin's Claw",
     "normalBossMaterial": "Lightning Prism",
-    "localSpecialties": "Valberry"
+    "localSpecialties": "Valberry",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Lisa.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Lisa_Portrait.webp"
   },
   {
     "name": "Diona",
@@ -177,7 +199,9 @@
     "commonMaterial": "Hilichurl Arrowheads",
     "weeklyBossMaterial": "Shard of a Foul Legacy",
     "normalBossMaterial": "Hoarfrost Core",
-    "localSpecialties": "Calla Lily"
+    "localSpecialties": "Calla Lily",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Diona.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Diona_Portrait.webp"
   },
   {
     "name": "Xiangling",
@@ -192,7 +216,9 @@
     "commonMaterial": "Slime",
     "weeklyBossMaterial": "Dvalin's Claw",
     "normalBossMaterial": "Everflame Seed",
-    "localSpecialties": "Jueyun Chili"
+    "localSpecialties": "Jueyun Chili",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Xiangling.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Xiangling_Portrait.webp"
   },
   {
     "name": "Ningguang",
@@ -207,7 +233,9 @@
     "commonMaterial": "Fatui Insignia",
     "weeklyBossMaterial": "Spirit Locket of Boreas",
     "normalBossMaterial": "Basalt Pillar",
-    "localSpecialties": "Glaze Lily"
+    "localSpecialties": "Glaze Lily",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Ningguang.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Ningguang_Portrait.webp"
   },
   {
     "name": "Ganyu",
@@ -222,7 +250,9 @@
     "commonMaterial": "Whopperflower Nectar",
     "weeklyBossMaterial": "Shadow of the Warrior",
     "normalBossMaterial": "Hoarfrost Core",
-    "localSpecialties": "Qingxin"
+    "localSpecialties": "Qingxin",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Ganyu.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Ganyu_Portrait.webp"
   },
   {
     "name": "Xiao",
@@ -237,7 +267,9 @@
     "commonMaterial": "Slime",
     "weeklyBossMaterial": "Shadow of the Warrior",
     "normalBossMaterial": "Juvenile Jade",
-    "localSpecialties": "Qingxin"
+    "localSpecialties": "Qingxin",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Xiao.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Xiao_Portrait.webp"
   },
   {
     "name": "Rosaria",
@@ -252,7 +284,9 @@
     "commonMaterial": "Fatui Insignia",
     "weeklyBossMaterial": "Shadow of the Warrior",
     "normalBossMaterial": "Hoarfrost Core",
-    "localSpecialties": "Valberry"
+    "localSpecialties": "Valberry",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Rosaria.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Rosaria_Portrait.webp"
   },
   {
     "name": "Bennett",
@@ -267,7 +301,9 @@
     "commonMaterial": "Treasure Hoarder Insignias",
     "weeklyBossMaterial": "Dvalin's Plume",
     "normalBossMaterial": "Everflame Seed",
-    "localSpecialties": "Windwheel Aster"
+    "localSpecialties": "Windwheel Aster",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Bennett.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Bennett_Portrait.webp"
   },
   {
     "name": "Barbara",
@@ -282,7 +318,9 @@
     "commonMaterial": "Samachurl Scrolls",
     "weeklyBossMaterial": "Ring of Boreas",
     "normalBossMaterial": "Cleansing Heart",
-    "localSpecialties": "Philanemo Mushroom"
+    "localSpecialties": "Philanemo Mushroom",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Barbara.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Barbara_Portrait.webp"
   },
   {
     "name": "Yanfei",
@@ -297,7 +335,9 @@
     "commonMaterial": "Treasure Hoarder Insignias",
     "weeklyBossMaterial": "Bloodjade Branch",
     "normalBossMaterial": "Juvenile Jade",
-    "localSpecialties": "Noctilucous Jade"
+    "localSpecialties": "Noctilucous Jade",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Yanfei.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Yanfei_Portrait.webp"
   },
   {
     "name": "Amber",
@@ -312,7 +352,9 @@
     "commonMaterial": "Hilichurl Arrowheads",
     "weeklyBossMaterial": "Dvalin's Sigh",
     "normalBossMaterial": "Everflame Seed",
-    "localSpecialties": "Small Lamp Grass"
+    "localSpecialties": "Small Lamp Grass",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Amber.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Amber_Portrait.webp"
   },
   {
     "name": "Mona",
@@ -327,7 +369,9 @@
     "commonMaterial": "Whopperflower Nectar",
     "weeklyBossMaterial": "Ring of Boreas",
     "normalBossMaterial": "Cleansing Heart",
-    "localSpecialties": "Philanemo Mushroom"
+    "localSpecialties": "Philanemo Mushroom",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Mona.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Mona_Portrait.webp"
   },
   {
     "name": "Hu Tao",
@@ -342,7 +386,9 @@
     "commonMaterial": "Whopperflower Nectar",
     "weeklyBossMaterial": "Shard of a Foul Legacy",
     "normalBossMaterial": "Juvenile Jade",
-    "localSpecialties": "Silk Flower"
+    "localSpecialties": "Silk Flower",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Hu_Tao.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Hu_Tao_Portrait.webp"
   },
   {
     "name": "Qiqi",
@@ -357,7 +403,9 @@
     "commonMaterial": "Samachurl Scrolls",
     "weeklyBossMaterial": "Tail of Boreas",
     "normalBossMaterial": "Hoarfrost Core",
-    "localSpecialties": "Violetgrass"
+    "localSpecialties": "Violetgrass",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Qiqi.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Qiqi_Portrait.webp"
   },
   {
     "name": "Tartaglia",
@@ -372,7 +420,9 @@
     "commonMaterial": "Fatui Insignia",
     "weeklyBossMaterial": "Shard of a Foul Legacy",
     "normalBossMaterial": "Cleansing Heart",
-    "localSpecialties": "Starconch"
+    "localSpecialties": "Starconch",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Tartaglia.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Tartaglia_Portrait.webp"
   },
   {
     "name": "Razor",
@@ -387,7 +437,9 @@
     "commonMaterial": "Hilichurl Masks",
     "weeklyBossMaterial": "Dvalin's Claw",
     "normalBossMaterial": "Lightning Prism",
-    "localSpecialties": "Wolfhook"
+    "localSpecialties": "Wolfhook",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Razor.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Razor_Portrait.webp"
   },
   {
     "name": "Zhongli",
@@ -402,7 +454,9 @@
     "commonMaterial": "Slime",
     "weeklyBossMaterial": "Tusk of Monoceros Caeli",
     "normalBossMaterial": "Basalt Pillar",
-    "localSpecialties": "Cor Lapis"
+    "localSpecialties": "Cor Lapis",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Zhongli.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Zhongli_Portrait.webp"
   },
   {
     "name": "Keqing",
@@ -417,7 +471,9 @@
     "commonMaterial": "Whopperflower Nectar",
     "weeklyBossMaterial": "Ring of Boreas",
     "normalBossMaterial": "Lightning Prism",
-    "localSpecialties": "Cor Lapis"
+    "localSpecialties": "Cor Lapis",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Keqing.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Keqing_Portrait.webp"
   },
   {
     "name": "Fischl",
@@ -432,7 +488,9 @@
     "commonMaterial": "Hilichurl Arrowheads",
     "weeklyBossMaterial": "Spirit Locket of Boreas",
     "normalBossMaterial": "Lightning Prism",
-    "localSpecialties": "Small Lamp Grass"
+    "localSpecialties": "Small Lamp Grass",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Fischl.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Fischl_Portrait.webp"
   },
   {
     "name": "Sucrose",
@@ -447,7 +505,9 @@
     "commonMaterial": "Whopperflower Nectar",
     "weeklyBossMaterial": "Spirit Locket of Boreas",
     "normalBossMaterial": "Hurricane Seed",
-    "localSpecialties": "Windwheel Aster"
+    "localSpecialties": "Windwheel Aster",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Sucrose.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Sucrose_Portrait.webp"
   },
   {
     "name": "Xinyan",
@@ -462,7 +522,9 @@
     "commonMaterial": "Treasure Hoarder Insignias",
     "weeklyBossMaterial": "Tusk of Monoceros Caeli",
     "normalBossMaterial": "Everflame Seed",
-    "localSpecialties": "Violetgrass"
+    "localSpecialties": "Violetgrass",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Xinyan.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Xinyan_Portrait.webp"
   },
   {
     "name": "Beidou",
@@ -477,6 +539,8 @@
     "commonMaterial": "Treasure Hoarder Insignias",
     "weeklyBossMaterial": "Dvalin's Sigh",
     "normalBossMaterial": "Lightning Prism",
-    "localSpecialties": "Noctilucous Jade"
+    "localSpecialties": "Noctilucous Jade",
+    "avatar": "assets\/img\/characters-avatars\/UI_AvatarIcon_Beidou.png",
+    "portrait": "assets\/img\/characters-portraits\/Character_Beidou_Portrait.webp"
   }
 ]

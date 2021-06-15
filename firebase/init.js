@@ -18,5 +18,5 @@ export default function firebaseInit() {
   if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
   }
-  return firebase.firestore();
+  return firebase;
 }
