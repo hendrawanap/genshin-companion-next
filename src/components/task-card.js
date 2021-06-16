@@ -5,7 +5,6 @@ import Button from "@/material/button";
 import Counter from "@/material/counter";
 import Modal from "@/components/utility/modal";
 import Image from "next/image";
-import { Transition } from "@headlessui/react";
 import { CSSTransition } from "react-transition-group";
 
 export default function TaskCard(props) {
@@ -62,7 +61,7 @@ export default function TaskCard(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    menuRef ? setCardHeight(initialCardHeight + menuRef.current.offsetHeight) : null;
+    menuRef ? (menuRef.current ? setCardHeight(initialCardHeight + menuRef.current.offsetHeight) : null) : null;
   }, [state.runs, state.level]);
   
 
@@ -182,10 +181,6 @@ let menuRef;
 
 function ExpandedMenu(props) {
   menuRef = useRef();
-  // const isChanged = () => (props.task.runs !== props.runs || props.task.level !== props.level);
-  // useEffect(() => {
-  //   isChanged() && props.expanded ? props.setCardHeight(48+menuRef.current.offsetHeight) : null;
-  // })
   return (
     <div
       className={`pl-7 pr-2 pb-3 text-xs text-white text-opacity-60`}
@@ -242,8 +237,8 @@ function ExpandedMenu(props) {
       </div>
       </div>
       <div className={`flex-row-reverse mt-7 mb-1 gap-x-8 ${(props.isChanged && !props.isAdd) ? 'flex' : 'hidden'}`}>
-        <Button variant="primary" type="text" icon="save" title="Save" noPadding={true}/>
-        <Button variant="danger" type="text" icon="clear" title="Cancel" noPadding={true} onClick={props.reset}/>
+        <Button variant="primary" type="text" icon="save" noPadding={true}>Save</Button>
+        <Button variant="danger" type="text" icon="clear" noPadding={true} onClick={props.reset}>Cancel</Button>
       </div>
     </div>
   );
@@ -358,8 +353,8 @@ function ConsumeResinModal(props) {
         consumed. Continue?
       </div>
       <div className="flex flex-row-reverse text-white gap-x-8 mt-7">
-        <Button variant="primary" type="text" title="Continue" noPadding={true} onClick={handleContinue}/>
-        <Button variant="danger" type="text" title="Cancel" noPadding={true} onClick={handleCancel}/>
+        <Button variant="primary" type="text" noPadding={true} onClick={handleContinue}>Continue</Button>
+        <Button variant="danger" type="text" noPadding={true} onClick={handleCancel}>Cancel</Button>
       </div>
     </div>
   );

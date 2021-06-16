@@ -1,3 +1,9 @@
+// props.variant: primary, danger, disabled
+// props.type: default, outlined, text
+// props.noPadding: true, false
+// props.icon: {material-icons}
+// props.title: string
+
 export default function Button(props) {
   const makeStyle = () => {
     let textColor;
@@ -34,7 +40,8 @@ export default function Button(props) {
 
   return (
     <button className="flex items-center" style={makeStyle()} onClick={props.onClick}>
-      <span className="material-icons mr-2 text-lg leading-none">{props.icon}</span>{props.title}
+      {props.icon ? <span className="material-icons mr-2 text-lg leading-none">{props.icon}</span> : null}
+      {props.children}
     </button>
   );
 }
