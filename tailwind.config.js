@@ -11,7 +11,11 @@ module.exports = {
         'primary': '#89CAFF',
         'danger': '#FF8989',
         'success': '#7AE07E',
-        'navbar': '#1E1E1E'
+        'navbar': '#1E1E1E',
+        'google': '#EA99D8'
+      },
+      fontSize: {
+        '2xs': ['.625rem', '1rem']
       },
       fontFamily: {
         'sans': ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],

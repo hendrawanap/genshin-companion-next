@@ -14,6 +14,7 @@ export default function Button(props) {
       case 'primary': bgColor="#89CAFF"; textColor="black"; borderColor=bgColor; break;
       case 'danger': bgColor="#FF8989"; textColor="black"; borderColor=bgColor; break;
       case 'disabled': bgColor="#2F2F2F"; textColor="#7E7E7E"; borderColor=bgColor; break;
+      case 'google': bgColor="#EA99D8"; textColor="black"; borderColor=bgColor; break;
     }
     switch(props.type) {
       case 'default': break;
@@ -39,7 +40,7 @@ export default function Button(props) {
   }
 
   return (
-    <button className="flex items-center" style={makeStyle()} onClick={props.onClick}>
+    <button className={`flex items-center justify-center ${props.isFull ? "w-full" : ""}`} style={makeStyle()} onClick={props.onClick}>
       {props.icon ? <span className="material-icons mr-2 text-lg leading-none">{props.icon}</span> : null}
       {props.children}
     </button>
