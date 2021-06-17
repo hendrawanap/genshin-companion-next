@@ -87,7 +87,7 @@ export default function TaskCard(props) {
   const isChanged = () => (task.runs !== state.runs || task.level !== state.level);
 
   return (
-    <div className={`border border-dark-25 rounded-md px-3 transition-height duration-300`} style={{height: cardHeight}} ref={cardRef}>
+    <div className={`border border-dark-15 rounded-md px-3 transition-height duration-300`} style={{height: cardHeight}} ref={cardRef}>
       <CardHeader
         isAdd={props.isAdd}
         openModal={() => dispatch({ type: 'openModal' })}
