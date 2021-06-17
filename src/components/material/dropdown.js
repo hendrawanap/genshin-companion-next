@@ -30,11 +30,11 @@ export default function Dropdown(props) {
       );
       if (i !== props.menus.length - 1)
         elements.push(
-          <div className="flex border-b border-white border-opacity-10" key={`divider-${i}`}></div>
+          <div className="flex border-b border-dark-25" key={`divider-${i}`}></div>
         );
     }
     return (
-      <div className="relative z-10 mt-1 bg-navbar rounded-md border border-white border-opacity-10 text-sm flex flex-col justify-between overflow-auto max-h-48 scrollbar-hide">
+      <div className="relative z-10 mt-1 bg-navbar rounded-md border border-dark-25 text-sm flex flex-col justify-between overflow-auto max-h-48 scrollbar-hide">
         {elements}
       </div>
     );
@@ -42,8 +42,8 @@ export default function Dropdown(props) {
   return (
     <div style={{minWidth: `${props.minWidth}px`}}>
       <div
-        className={`flex items-center justify-between rounded-md bg-primary bg-opacity-10 pl-4 pr-2 py-2 font-medium tracking-wide whitespace-nowrap ${
-          expanded ? "bg-opacity-20 text-white text-opacity-80" : "text-primary"
+        className={`flex items-center justify-between rounded-md bg-primary bg-opacity-15 pl-4 pr-2 py-2 font-medium tracking-wide whitespace-nowrap ${
+          expanded ? "bg-opacity-20 text-white text-opacity-high" : "text-primary text-opacity-high"
         }`}
         onClick={ toggleExpand }
       >

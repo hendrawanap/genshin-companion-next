@@ -22,7 +22,7 @@ export default function TodaysDomains() {
   const activeTab = "Talent";
   return (
     <div className="px-4">
-      <h3 className="mb-2 text-white text-opacity-80 text-lg font-medium tracking-wide">
+      <h3 className="mb-2 text-white text-opacity-high text-lg font-medium tracking-wide">
         Today's Domains
       </h3>
       <Tabs tabs={tabs} activeTab={activeTab}/>

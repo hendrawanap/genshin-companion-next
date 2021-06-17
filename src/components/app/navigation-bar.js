@@ -34,20 +34,20 @@ export default function NavigationBar(props) {
         leaveTo="-translate-x-full"
       >
         <nav className={`fixed inset-0 w-9/12`}>
-          <div className="bg-navbar min-h-screen w-full flex flex-col items-start px-4 py-2">
-            <Image className="ml-8 mb-6" src="/assets/img/Logo.png" height={36} width={116}/>
+          <div className="bg-dark-5 min-h-screen w-full flex flex-col items-start px-4 py-2">
+          <div className="relative ml-8 mb-4" style={{height: '36px', width: '120px'}}><Image src="/assets/img/Logo.png" layout="fill" objectFit="contain" quality={100}/></div>
             <ul className="nav-list">
               {
                 nav_list.map((nav_item, index) => (
                   <li className="nav-item" key={`nav-${index}`}>
-                    <div key={nav_item.id} className="flex py-2 text-white text-opacity-60" id={`link-${nav_item.id}`} to={nav_item.to}>
+                    <div key={nav_item.id} className="flex py-2 text-white text-opacity-medium tracking-wide" id={`link-${nav_item.id}`} to={nav_item.to}>
                       <span className="material-icons mr-6">{nav_item.icon}</span><span>{nav_item.name}</span>
                     </div>
                   </li>
                 ))
               }
             </ul>
-            <div className="flex py-2 text-white text-opacity-60 absolute bottom-4 left-4">
+            <div className="flex py-2 text-white text-opacity-medium absolute bottom-4 left-4">
               <span className="material-icons mr-6 transform rotate-180">logout</span><span>Logout</span>
             </div>
           </div>

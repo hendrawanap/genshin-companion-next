@@ -11,10 +11,10 @@ export default function Input(props) {
   };
 
   return (
-    <div className={`border rounded-md px-4 h-12 flex items-center ${isFocused ? "border-primary bg-primary bg-opacity-10" : "border-white border-opacity-10"}`}>
+    <div className={`border rounded-md px-4 h-12 flex items-center ${isFocused ? "border-primary bg-primary bg-opacity-10" : "border-dark-25"}`}>
       <div className={`${props.isFull ? "w-full" : ""}`}>
         <div
-          className={`text-2xs leading-none text-white text-opacity-30 ${
+          className={`text-2xs leading-none text-white text-opacity-disabled ${
             isEmpty ? "hidden" : ""
           }`}
         >
@@ -23,7 +23,7 @@ export default function Input(props) {
         <input
           onChange={handleChange}
           value={props.value}
-          className="block bg-transparent text-sm text leading-none text-white text-opacity-80 placeholder-white placeholder-opacity-30 w-full focus:ring-0 focus:outline-none"
+          className="block bg-transparent text-sm text leading-none text-white text-opacity-high placeholder-white placeholder-opacity-disabled w-full focus:ring-0 focus:outline-none"
           type={props.type}
           placeholder={props.placeholder}
           onFocus={() => setIsFocused(true)}

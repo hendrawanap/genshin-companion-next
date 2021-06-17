@@ -153,10 +153,10 @@ function CardHeader(props) {
           onClick={props.openModal}
         ></div>
       }
-      <div className="flex whitespace-nowrap overflow-auto flex-1 text-white text-opacity-60 mr-2 text-sm font-medium tracking-wide">
+      <div className="flex whitespace-nowrap overflow-auto flex-1 text-white text-opacity-medium mr-2 text-sm font-medium tracking-wide">
         {props.name}
       </div>
-      <div className="flex mr-2 items-center text-primary font-medium">
+      <div className="flex mr-2 items-center text-primary text-opacity-high font-medium">
         <div className="w-4 mr-1">
           <Image
             src="/assets/img/Item_Fragile_Resin.png"
@@ -168,7 +168,7 @@ function CardHeader(props) {
         {props.totalCosts}
       </div>
       <div
-        className="text-white text-opacity-60 cursor-default material-icons"
+        className="text-white text-opacity-medium cursor-default material-icons"
         onClick={props.toggleExpand}
       >
         expand_more
@@ -183,7 +183,7 @@ function ExpandedMenu(props) {
   menuRef = useRef();
   return (
     <div
-      className={`pl-7 pr-2 pb-3 text-xs text-white text-opacity-60`}
+      className={`pl-7 pr-2 pb-3 text-xs text-white text-opacity-medium`}
       ref={menuRef}
     >
       <div className="flex">
@@ -200,7 +200,7 @@ function ExpandedMenu(props) {
           </div>
           <div className="mt-2">
             Cost per run:
-            <div className="flex items-center font-medium text-base text-primary mt-1">
+            <div className="flex items-center font-medium text-base text-primary text-opacity-high mt-1">
               <div className="relative w-4 h-4 mr-1">
                 <Image
                   src="/assets/img/Item_Fragile_Resin.png"
@@ -217,7 +217,7 @@ function ExpandedMenu(props) {
         <div className="h-16">
           <div>Rewards:</div>
           <div
-            className="mt-1 flex overflow-auto text-primary gap-x-2 justify-start scrollbar-hide"
+            className="mt-1 flex overflow-auto text-primary text-opacity-high gap-x-2 justify-start scrollbar-hide"
             style={{ minWidth: "100px" }}
           >
             <Rewards rewards={props.rewards}/>

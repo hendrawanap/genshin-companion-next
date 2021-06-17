@@ -19,19 +19,19 @@ export default function Counter(props) {
       <button
         className={`bg-primary text-primary text-sm leading-none rounded-full p-3 material-icons ${
           isMin
-            ? "bg-opacity-disable text-opacity-30"
-            : "bg-opacity-10 text-opacity-80"
+            ? "bg-opacity-disable text-opacity-disabled"
+            : "bg-opacity-15 text-opacity-high"
         }`}
         onClick={ decrement }
       >
         remove
       </button>
-      <div className="mx-4 font-medium text-primary text-base">{props.count}</div>
+      <div className="mx-4 font-medium text-primary text-opacity-high text-base">{props.count}</div>
       <button
         className={`bg-primary text-primary text-sm leading-none rounded-full p-3 material-icons ${
           isMax
-            ? "bg-opacity-disable text-opacity-30"
-            : "bg-opacity-10 text-opacity-80"
+            ? "bg-opacity-disable text-opacity-disabled"
+            : "bg-opacity-15 text-opacity-high"
         }`}
         onClick={ increment }
       >

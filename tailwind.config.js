@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundOpacity: {
-        'disable': '0.05'
+        'disable': '4%',
+        '15': '15%'
       },
       colors: {
         dark: {
@@ -14,11 +15,21 @@ module.exports = {
           '15': '#404040',
           '25': '#565656',
         },
-        'primary': '#89CAFF',
+        'primary': '#7BC4FF',
         'danger': '#FF8989',
         'success': '#7AE07E',
         'navbar': '#1E1E1E',
         'google': '#EA99D8'
+      },
+      textOpacity: {
+        'high': '87%',
+        'medium': '60%',
+        'disabled': '38%',
+      },
+      placeholderOpacity: {
+        'high': '87%',
+        'medium': '60%',
+        'disabled': '38%',
       },
       fontSize: {
         '2xs': ['.625rem', '1rem']

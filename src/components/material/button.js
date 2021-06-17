@@ -13,12 +13,12 @@ export default function Button(props) {
     switch(props.variant) {
       case 'primary': bgColor="#89CAFF"; textColor="black"; borderColor=bgColor; break;
       case 'danger': bgColor="#FF8989"; textColor="black"; borderColor=bgColor; break;
-      case 'disabled': bgColor="#2F2F2F"; textColor="#7E7E7E"; borderColor=bgColor; break;
+      case 'disabled': bgColor="#2F2F2F"; textColor="#404040"; borderColor=bgColor; break;
       case 'google': bgColor="#EA99D8"; textColor="black"; borderColor=bgColor; break;
     }
     switch(props.type) {
       case 'default': break;
-      case 'outlined': textColor=bgColor; bgColor="transparent"; borderColor="#383838"; break;
+      case 'outlined': textColor=bgColor; bgColor="transparent"; borderColor="#565656"; break;
       case 'text': textColor=bgColor; bgColor="transparent"; borderColor="transparent"; break;
     }
     switch(Boolean(props.icon)) {

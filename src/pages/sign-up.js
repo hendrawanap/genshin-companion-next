@@ -72,9 +72,9 @@ export default function SignUp(props) {
         </Button>
       </div>
       <div className="flex items-center justify-between py-6">
-        <div className="w-5/12 border border-white border-bottom border-opacity-10"></div>
+        <div className="w-5/12 border border-dark-15 border-bottom"></div>
         <div className="text-white text-opacity-30">Or</div>
-        <div className="w-5/12 border border-white border-bottom border-opacity-10"></div>
+        <div className="w-5/12 border border-dark-15 border-bottom"></div>
       </div>
       <div>
         <Button variant="google" type="outlined" isFull={true}>
@@ -87,7 +87,7 @@ export default function SignUp(props) {
         </Button>
       </div>
       <div className="mt-6 text-center text-white text-opacity-30 text-sm">
-        Already have an account{" "}
+        Already have an account?{" "}
         <Link href="/sign-in">
           <a className="text-white text-opacity-80">Sign in</a>
         </Link>
