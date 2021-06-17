@@ -27,7 +27,7 @@ export default function AppLayout(props) {
 function AppContent(props) {
   const [openNavbar, setOpenNavbar] = useState(false);
   return (
-    <div className="bg-black bg-opacity-90 text-white container-sm min-h-screen mx-auto relative">
+    <div className="bg-dark-0 text-white container-sm min-h-screen mx-auto relative">
       <Header openNavbar={() => setOpenNavbar(true)}/>
       <NavigationBar isOpen={openNavbar} close={() => setOpenNavbar(false)}/>
       <div className="pt-14 py-2">

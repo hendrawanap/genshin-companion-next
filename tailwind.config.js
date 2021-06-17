@@ -8,6 +8,12 @@ module.exports = {
         'disable': '0.05'
       },
       colors: {
+        dark: {
+          '0': '#181818',
+          '5': '#242424',
+          '15': '#3B3B3B',
+          '25': '#525252',
+        },
         'primary': '#89CAFF',
         'danger': '#FF8989',
         'success': '#7AE07E',

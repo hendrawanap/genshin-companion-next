@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Header(props) {
   const [openModal, setOpenModal] = useState(false);
   return (
-    <header className='flex h-14 items-center justify-between px-3 bg-navbar fixed z-30 top-0 left-0 right-0'>
+    <header className='flex h-14 items-center justify-between px-3 bg-dark-5 fixed z-30 top-0 left-0 right-0'>
       <button
         className="opacity-90 material-icons"
         id="navbar-btn"
