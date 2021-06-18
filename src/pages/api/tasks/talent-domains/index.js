@@ -3,7 +3,7 @@ const domains = require('../../json/domains.json');
 const characters = require('../../json/characters.json');
 
 const talentDomains = domains.filter((domain) => domain.type == 'Domains of Mastery');
-let tasks = [];
+let tasks;
 let initialLevel = 1;
 let initialRuns = 1;
 let initialLevels = ["Level 1", "Level 2", "Level 3", "Level 4"];
@@ -83,7 +83,8 @@ function makeTasks(domain) {
         })
       }),
       requiredBy: requiredBy.map(character => character.name),
-      avatars: requiredBy.map(character => character.avatar)
+      avatars: requiredBy.map(character => character.avatar),
+      possibleRewards: talents.map(talent => talent.img)
     })
   }
   return tasks;
@@ -111,7 +112,7 @@ function setInitialLevelRuns(user) {
   }
 }
 
-export default (req, res) => {
+export function fetchTasks() {
   const user = {
     name: "Baps",
     ar: 36
@@ -120,7 +121,23 @@ export default (req, res) => {
   talentDomains.forEach(domain => {
     tasks = tasks.concat(makeTasks(domain));
   });
+  return tasks;
+}
+
+export default async (req, res) => {
+  const user = {
+    name: "Baps",
+    ar: 36
+  }
+  setInitialLevelRuns(user);
+  tasks = [];
+  talentDomains.forEach(domain => {
+    tasks = tasks.concat(makeTasks(domain));
+  });
   const { day, name } = req.query;
-  const response = filterTasksByCharacter(name);
+  const responseDay = day && filterTasksByDay(day);
+  const responseName = name && filterTasksByCharacter(name);
+
+  // setTimeout(() => res.status(200).json(tasks), 1000);
   res.status(200).json(tasks);
 }

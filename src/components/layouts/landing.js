@@ -18,7 +18,7 @@ export default function LandingLayout(props) {
 function Content(props) {
   return (
     <>
-      <div className="px-12 bg-black bg-opacity-90 text-white container-sm min-h-screen mx-auto relative">
+      <div className="px-12 bg-dark-0 text-white container-sm min-h-screen mx-auto relative">
         <Header/>
         <div className="pt-24 py-2">
           {props.children}

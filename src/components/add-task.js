@@ -1,41 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Tabs from "@/components/tabs";
 import TaskCard from "@/components/task-card";
 import { talentTasks, weaponTasks, outcropsTasks } from "../models/Tasks";
 import Image from "next/image";
 
 export default function AddTask(props) {
-  const tabs = [
+  
+
+  const [tabs, setTabs] = useState([
     {
       name: "All",
-      component: () => <TasksTab tasks={talentTasks}/>
+      component: () => <TasksTab/>
     },
     {
       name: "Artefact",
-      component: () => <TasksTab tasks={talentTasks}/>
+      component: () => <TasksTab/>
     },
     {
       name: "Boss",
-      component: () => <TasksTab tasks={talentTasks}/>
+      component: () => <TasksTab/>
     },
     {
       name: "Talent",
-      component: () => <TasksTab tasks={talentTasks}/>
+      component: () => <TasksTab/>
     },
     {
       name: "Outcrops",
-      component: () => <TasksTab tasks={outcropsTasks}/>
+      component: () => <TasksTab/>
     },
     {
       name: "Weapon",
-      component: () => <TasksTab tasks={weaponTasks}/>
+      component: () => <TasksTab/>
     },
     {
       name: "Weekly Boss",
-      component: () => <TasksTab tasks={talentTasks}/>
+      component: () => <TasksTab/>
     },
-  ];
-  const activeTab = "Talent";
+  ]);
 
   return (
     <div className="bg-navbar h-screen px-4 overflow-y-auto scrollbar-hide">
@@ -59,7 +60,7 @@ export default function AddTask(props) {
           <span className="material-icons mr-2 text-lg leading-none">filter_list</span><span className="text-sm">Filters</span>
         </button>
       </div>
-      <Tabs tabs={tabs} activeTab={activeTab} />
+      <Tabs tabs={tabs} activeTab={tabs[0].name} />
     </div>
   );
   function TaskCardContent(props) {
@@ -88,7 +89,7 @@ export default function AddTask(props) {
         <div className="flex items-center mb-2">
           <div className="border-r-2 border-primary h-3 mr-2"></div>
           <div className="flex-1 text-sm">
-            {props.task.name} <span className="text-xs">(Saturday)</span>
+            {props.task.domainName} <span className="text-xs">({props.task.days.join('/')})</span>
           </div>
           <button
             className="material-icons"
@@ -97,7 +98,7 @@ export default function AddTask(props) {
             expand_more
           </button>
         </div>
-        <div className={`ml-2 ${expanded ? "block" : "hidden"}`}>
+        <div className={`ml-2 mb-2 ${expanded ? "block" : "hidden"}`}>
           <div className={`text-xs mb-1 ${expanded ? "block" : "hidden"}`}>
             Tasks:
           </div>
@@ -113,42 +114,30 @@ export default function AddTask(props) {
           <div className={`mt-2 ${expanded ? "block" : "hidden"}`}>
             <div className="text-xs mb-1">Required by:</div>
             <div className="flex">
-              <div
-                className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
-                  expanded ? "w-9" : "w-7"
-                }`}
-              >
-                <Image
-                  src="/assets/img/Item_Philosophies_of_Ballad.webp"
-                  width="100%"
-                  height="auto"
-                  layout="responsive"
-                />
-              </div>
-              <div
-                className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
-                  expanded ? "w-9" : "w-7"
-                }`}
-              >
-                <Image
-                  src="/assets/img/Item_Philosophies_of_Ballad.webp"
-                  width="100%"
-                  height="auto"
-                  layout="responsive"
-                />
-              </div>
-              <div
-                className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
-                  expanded ? "w-9" : "w-7"
-                }`}
-              >
-                <Image
-                  src="/assets/img/Item_Philosophies_of_Ballad.webp"
-                  width="100%"
-                  height="auto"
-                  layout="responsive"
-                />
-              </div>
+              {props.task.avatars.map((avatar, index) => {
+                return (
+                  <img
+                    src={"/" + avatar}
+                    alt={props.task.requiredBy[index]}
+                    className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 relative ${
+                      expanded ? "w-9 h-9" : "w-7 h-7"
+                    }`}
+                  />
+                  // <div
+                  //   className={`rounded-full border border-white bg-white bg-opacity-5 mr-1 relative ${
+                  //     expanded ? "w-9 h-9" : "w-7 h-7"
+                  //   }`}
+                  // >
+                  //   {/* <Image
+                  //     src={"/" + avatar}
+                  //     alt={props.task.requiredBy[index]}
+                  //     layout="fill"
+                  //     objectFit="contain"
+                  //   /> */}
+                    
+                  // </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -156,9 +145,18 @@ export default function AddTask(props) {
     );
   }
   function TasksTab(props) {
+    useEffect( async() => {
+      const res = await fetch("/api/tasks/talent-domains");
+      const json = await res.json();
+      console.log(json);
+      setTasks(json);
+    },[])
+
+    const [tasks, setTasks] = useState(null);
+
     return (
       <div className={`flex flex-col`}>
-        {props.tasks.map((task, index) => <TaskCardContent task={task} key={`task-${index}`}/>)}
+        {tasks && tasks.map((task, index) => <TaskCardContent task={task} key={`task-${index}`}/>)}
       </div>
     );
   }

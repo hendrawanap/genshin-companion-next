@@ -20,7 +20,7 @@ export default function Dropdown(props) {
         <div
           key={menu}
           className={`px-4 py-3 ${
-            menu === props.activeMenu ? "text-primary bg-primary bg-opacity-5" : ""
+            menu === props.activeMenu ? "text-primary text-opacity-high bg-primary bg-opacity-5" : "text-white text-opacity-high"
           }`}
           id={menu}
           onClick={onChange}
@@ -34,7 +34,7 @@ export default function Dropdown(props) {
         );
     }
     return (
-      <div className="relative z-10 mt-1 bg-navbar rounded-md border border-dark-25 text-sm flex flex-col justify-between overflow-auto max-h-48 scrollbar-hide">
+      <div className="relative z-10 mt-1 bg-dark-5 rounded-md border border-dark-25 text-sm flex flex-col justify-between overflow-auto max-h-48 scrollbar-hide">
         {elements}
       </div>
     );

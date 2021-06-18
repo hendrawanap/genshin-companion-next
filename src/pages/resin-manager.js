@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ResinCard from "@/components/resin-card";
 import { ResinContext } from '../contexts/ResinContext';
 import Counter from "@/material/counter";
@@ -10,6 +10,8 @@ import Modal from "@/components/utility/modal";
 import { tasks } from "../models/Tasks";
 import AppLayout from '@/components/layouts/app';
 import BottomSlideOver from '@/components/utility/bottom-slide-over';
+import Button from '@/components/material/button';
+import { weaponTasks } from "../models/Tasks";
 
 export default function ResinManager(props) {
   const [openModal, setOpenModal] = useState(false);
@@ -29,16 +31,24 @@ export default function ResinManager(props) {
     setDay(day);
   }
 
+  // const [talentTasks, setTalentTasks] = useState(weaponTasks);
+  // useEffect( async() => {
+  //   const res = await fetch("/api/tasks/talent-domains");
+  //   const json = await res.json();
+  //   console.log(json);
+  //   setTalentTasks(json);
+  // },[])
+
 
   return(
     <AppLayout>
       <h1 className="text-4xl text-primary px-4 mt-4 mb-6">Resin <span className="text-white">Manager</span></h1>
-      <div className="flex px-4 mb-8">
+      <div className="flex px-4 mb-8 items-start">
         <Resin/>
         <ResinSetter/>
       </div>
       <div className="px-4">
-        <div className="mb-2 text-lg">Tasks</div>
+        <div className="mb-2 text-lg text-white text-opacity-high">Tasks</div>
         <div className="flex justify-between mb-2">
           <div className="" style={{maxHeight: "44px"}}>
             <Dropdown activeMenu={day} menus={days} minWidth={150} onChange={dayHandler}/>
@@ -50,7 +60,7 @@ export default function ResinManager(props) {
           </div>
         </div>
         <TasksTab tasks={tasks}/>
-        <button className="text-primary py-3 pl-1 pr-3 flex items-center" onClick={() => setOpenSlide(true)}><span className="material-icons mr-2">add</span>Add Task</button>
+        <Button variant="primary" type="text" icon="add" onClick={() => setOpenSlide(true)}>Add Task</Button>
       </div>
       <BottomSlideOver isOpen={openSlide} close={() => setOpenSlide(false)}>
         <AddTask closeHandler={() => setOpenSlide(false)}/>
@@ -62,7 +72,7 @@ export default function ResinManager(props) {
 function Resin(props) {
   const [originalResin, setOriginalResin, condensedResin, setCondensedResin] = useContext(ResinContext);
   return(
-    <div className="px-4 py-3 border border-white border-opacity-10 rounded-xl mr-8">
+    <div className="px-4 py-3 border border-dark-15 rounded-xl mr-8">
       <ResinCard originalResin={ originalResin } condensedResin={ condensedResin }/>
     </div>
   );
@@ -72,9 +82,9 @@ function ResinSetter(props) {
   const [originalResin, setOriginalResin, condensedResin, setCondensedResin] = useContext(ResinContext);
   return (
     <div>
-      <div>Set Current Resin</div>
+      <div className="mb-1 text-white text-opacity-medium">Set Current Resin</div>
       <Counter count={originalResin} min={0} max={1000} onChange={setOriginalResin}/>
-      <div>Condensed Resin</div>
+      <div className="mb-1 mt-2 text-white text-opacity-medium">Condensed Resin</div>
       <Counter count={condensedResin} min={0} max={5} onChange={setCondensedResin}/>
     </div>
   );
