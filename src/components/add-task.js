@@ -75,7 +75,7 @@ export default function AddTask(props) {
             key={`reward-${index}`}
           >
             <Image
-              src={reward.img}
+              src={reward}
               width="100%"
               height="auto"
               layout="responsive"
@@ -109,33 +109,35 @@ export default function AddTask(props) {
             <div className={`text-xs mb-1 ${expanded ? "block" : "hidden"}`}>
               Possible rewards:
             </div>
-            <div className="flex">{rewardsContent(props.task.rewards[3])}</div>
+            <div className="flex">{rewardsContent(props.task.possibleRewards)}</div>
           </div>
           <div className={`mt-2 ${expanded ? "block" : "hidden"}`}>
             <div className="text-xs mb-1">Required by:</div>
             <div className="flex">
               {props.task.avatars.map((avatar, index) => {
                 return (
-                  <img
-                    src={"/" + avatar}
-                    alt={props.task.requiredBy[index]}
-                    className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 relative ${
-                      expanded ? "w-9 h-9" : "w-7 h-7"
-                    }`}
-                  />
+                  // <img
+                  //   src={"/" + avatar}
+                  //   alt={props.task.requiredBy[index]}
+                  //   className="rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 relative w-9 h-9"
+                  // />
                   // <div
                   //   className={`rounded-full border border-white bg-white bg-opacity-5 mr-1 relative ${
                   //     expanded ? "w-9 h-9" : "w-7 h-7"
                   //   }`}
                   // >
-                  //   {/* <Image
-                  //     src={"/" + avatar}
-                  //     alt={props.task.requiredBy[index]}
-                  //     layout="fill"
-                  //     objectFit="contain"
-                  //   /> */}
                     
                   // </div>
+                  <div className="relative w-9 h-9 rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1" key={`avatar-${index}`}>
+                    <Image
+                      className="rounded-full"
+                      src={"/" + avatar}
+                      alt={props.task.requiredBy[index]}
+                      layout="responsive"
+                      width="36px"
+                      height="36px"
+                    />
+                  </div>
                 );
               })}
             </div>
@@ -148,7 +150,6 @@ export default function AddTask(props) {
     useEffect( async() => {
       const res = await fetch("/api/tasks/talent-domains");
       const json = await res.json();
-      console.log(json);
       setTasks(json);
     },[])
 
