@@ -10,31 +10,31 @@ export default function AddTask(props) {
   const [tabs, setTabs] = useState([
     {
       name: "All",
-      component: () => <TasksTab/>
+      component: () => <TasksTab url="/api/tasks/talent-domains"/>
     },
     {
       name: "Artefact",
-      component: () => <TasksTab/>
+      component: () => <TasksTab url="/api/tasks/talent-domains"/>
     },
     {
       name: "Boss",
-      component: () => <TasksTab/>
+      component: () => <TasksTab url="/api/tasks/talent-domains"/>
     },
     {
       name: "Talent",
-      component: () => <TasksTab/>
+      component: () => <TasksTab url="/api/tasks/talent-domains"/>
     },
     {
       name: "Outcrops",
-      component: () => <TasksTab/>
+      component: () => <TasksTab url="/api/tasks/talent-domains"/>
     },
     {
       name: "Weapon",
-      component: () => <TasksTab/>
+      component: () => <TasksTab url="/api/tasks/weapon-domains"/>
     },
     {
       name: "Weekly Boss",
-      component: () => <TasksTab/>
+      component: () => <TasksTab url="/api/tasks/weekly-bosses"/>
     },
   ]);
 
@@ -68,13 +68,15 @@ export default function AddTask(props) {
     const rewardsContent = (rewards) => {
       return rewards.map((reward, index) => {
         return (
+          
           <div
-            className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
-              expanded ? "w-9" : "w-7"
+            className={`relative flex-shrink-0  rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
+              expanded ? "w-9 h-9" : "w-7 h-7"
             }`}
             key={`reward-${index}`}
           >
             <Image
+              className="rounded-full"
               src={reward}
               width="100%"
               height="auto"
@@ -88,8 +90,8 @@ export default function AddTask(props) {
       <div className="flex flex-col py-2 px-3 border border-white border-opacity-10 rounded-md mb-3 text-white text-opacity-60">
         <div className="flex items-center mb-2">
           <div className="border-r-2 border-primary h-3 mr-2"></div>
-          <div className="flex-1 text-sm">
-            {props.task.domainName} <span className="text-xs">({props.task.days.join('/')})</span>
+          <div className="flex-1 text-sm overflow-x-auto scrollbar-hide whitespace-nowrap">
+            {props.task.domainName} <span className="text-xs">{props.task.days.length !== 7 && `(${props.task.days.join('/')})`}</span>
           </div>
           <button
             className="material-icons"
@@ -109,26 +111,14 @@ export default function AddTask(props) {
             <div className={`text-xs mb-1 ${expanded ? "block" : "hidden"}`}>
               Possible rewards:
             </div>
-            <div className="flex">{rewardsContent(props.task.possibleRewards)}</div>
+            <div className="flex overflow-x-auto scrollbar-hide">{rewardsContent(props.task.possibleRewards)}</div>
           </div>
           <div className={`mt-2 ${expanded ? "block" : "hidden"}`}>
             <div className="text-xs mb-1">Required by:</div>
-            <div className="flex">
+            <div className="flex overflow-x-auto scrollbar-hide">
               {props.task.avatars.map((avatar, index) => {
                 return (
-                  // <img
-                  //   src={"/" + avatar}
-                  //   alt={props.task.requiredBy[index]}
-                  //   className="rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 relative w-9 h-9"
-                  // />
-                  // <div
-                  //   className={`rounded-full border border-white bg-white bg-opacity-5 mr-1 relative ${
-                  //     expanded ? "w-9 h-9" : "w-7 h-7"
-                  //   }`}
-                  // >
-                    
-                  // </div>
-                  <div className="relative w-9 h-9 rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1" key={`avatar-${index}`}>
+                  <div className="relative flex-shrink-0 w-9 h-9 rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1" key={`avatar-${index}`}>
                     <Image
                       className="rounded-full"
                       src={"/" + avatar}
@@ -148,7 +138,7 @@ export default function AddTask(props) {
   }
   function TasksTab(props) {
     useEffect( async() => {
-      const res = await fetch("/api/tasks/talent-domains");
+      const res = await fetch(props.url);
       const json = await res.json();
       setTasks(json);
     },[])

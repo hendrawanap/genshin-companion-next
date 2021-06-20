@@ -20,7 +20,7 @@ export default function TodaysTaskCard(props) {
           key={`reward-${index}`}
         >
           <Image
-            src={reward.img}
+            src={reward}
             width="100%"
             height="auto"
             layout="responsive"
@@ -52,8 +52,8 @@ export default function TodaysTaskCard(props) {
     >
       <div className="flex items-center mb-2">
         <div className="border-r-2 border-primary h-3 mr-2"></div>
-        <div className="flex-1 text-sm">
-          {props.name} <span className="text-xs">({props.day})</span>
+        <div className="flex-1 text-sm overflow-x-auto whitespace-nowrap scrollbar-hide">
+          {props.name} <span className="text-xs">({props.today})</span>
         </div>
         <button className="material-icons" onClick={handleClick}>
           expand_more
@@ -76,45 +76,23 @@ export default function TodaysTaskCard(props) {
         >
           <div>
             <div className={`mt-2 ${isExpanded ? "block" : "hidden"}`}>
-              <div className="text-xs mb-1">Required by:</div>
-              <div className="flex">
-                <div
-                  className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
-                    isExpanded ? "w-9" : "w-7"
-                  }`}
-                >
-                  <Image
-                    src="/assets/img/Item_Philosophies_of_Ballad.webp"
-                    width="100%"
-                    height="auto"
-                    layout="responsive"
-                  />
-                </div>
-                <div
-                  className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
-                    isExpanded ? "w-9" : "w-7"
-                  }`}
-                >
-                  <Image
-                    src="/assets/img/Item_Philosophies_of_Ballad.webp"
-                    width="100%"
-                    height="auto"
-                    layout="responsive"
-                  />
-                </div>
-                <div
-                  className={`rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
-                    isExpanded ? "w-9" : "w-7"
-                  }`}
-                >
-                  <Image
-                    src="/assets/img/Item_Philosophies_of_Ballad.webp"
-                    width="100%"
-                    height="auto"
-                    layout="responsive"
-                  />
-                </div>
-              </div>
+            <div className="text-xs mb-1">Required by:</div>
+            <div className="flex overflow-x-auto scrollbar-hide">
+              {props.avatars.map((avatar, index) => {
+                return (
+                  <div className="relative flex-shrink-0 w-9 h-9 rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1" key={`avatar-${index}`}>
+                    <Image
+                      className="rounded-full"
+                      src={"/" + avatar}
+                      alt={props.requiredBy[index]}
+                      layout="responsive"
+                      width="36px"
+                      height="36px"
+                    />
+                  </div>
+                );
+              })}
+            </div>
             </div>
             <button
               className={`text-primary text-sm py-2 ${

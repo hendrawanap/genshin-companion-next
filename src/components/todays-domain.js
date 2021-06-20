@@ -1,6 +1,7 @@
 import { todaysDomain } from "../models/Tasks";
 import Tabs from "@/components/tabs";
 import TodaysTaskCard from "@/components/todays-task-card";
+import { useEffect, useState } from "react";
 
 export default function TodaysDomains() {
   const talents = todaysDomain.talent;
@@ -8,18 +9,20 @@ export default function TodaysDomains() {
   const tabs = [
     {
       name: "All",
-      component: () => <TodaysTasks tasks={[...weapon, ...talents]}/>
+      component: () => <TodaysTasks url="/api/tasks/weapon-domains"/>
     },
     {
       name: "Weapon",
-      component: () => <TodaysTasks tasks={weapon}/>
+      component: () => <TodaysTasks url="/api/tasks/weapon-domains"/>
     },
     {
       name: "Talent",
-      component: () => <TodaysTasks tasks={talents}/> 
+      component: () => <TodaysTasks url="/api/tasks/talent-domains"/>
     },
   ];
   const activeTab = "Talent";
+
+
   return (
     <div className="px-4">
       <h3 className="mb-2 text-white text-opacity-high text-lg font-medium tracking-wide">
@@ -31,10 +34,19 @@ export default function TodaysDomains() {
 }
 
 function TodaysTasks(props) {
+  const today = "Saturday";
+  const url = `${props.url}?day=${today}`;
+  useEffect( async() => {
+    const res = await fetch(url);
+    const json = await res.json();
+    setTasks(json);
+  },[])
+  const [tasks, setTasks] = useState(null);
+
   return (
     <div className={`tracking-wider`}>
-      {props.tasks.map((task, index) => (
-        <TodaysTaskCard name={task.name} day={task.day} rewards={task.rewards} key={`task-${index}`} />
+      {tasks && tasks.map((task, index) => (
+        <TodaysTaskCard today={today} name={task.domainName} rewards={task.possibleRewards} requiredBy={task.requiredBy} avatars={task.avatars} key={`task-${index}`} />
       ))}
     </div>
   );

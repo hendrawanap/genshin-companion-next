@@ -3,72 +3,72 @@
     "name": "Tail of Boreas",
     "rarity": 5,
     "droppedBy": "Andrius",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Tail_of_Boreas.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Tail_of_Boreas.webp"
   },
   {
     "name": "Ring of Boreas",
     "rarity": 5,
     "droppedBy": "Andrius",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Ring_of_Boreas.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Ring_of_Boreas.webp"
   },
   {
     "name": "Spirit Locket of Boreas",
     "rarity": 5,
     "droppedBy": "Andrius",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Spirit_Locket_of_Boreas.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Spirit_Locket_of_Boreas.webp"
   },
   {
     "name": "Bloodjade Branch",
     "rarity": 5,
     "droppedBy": "Azhdaha",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Bloodjade_Branch.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Bloodjade_Branch.webp"
   },
   {
     "name": "Dragon Lord's Crown",
     "rarity": 5,
     "droppedBy": "Azhdaha",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Dragon_Lord's_Crown.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Dragon_Lord's_Crown.webp"
   },
   {
     "name": "Gilded Scale",
     "rarity": 5,
     "droppedBy": "Azhdaha",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Gilded_Scale.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Gilded_Scale.webp"
   },
   {
     "name": "Shard of a Foul Legacy",
     "rarity": 5,
     "droppedBy": "Childe",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Shard_of_a_Foul_Legacy.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Shard_of_a_Foul_Legacy.webp"
   },
   {
     "name": "Tusk of Monoceros Caeli",
     "rarity": 5,
     "droppedBy": "Childe",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Tusk_of_Monoceros_Caeli.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Tusk_of_Monoceros_Caeli.webp"
   },
   {
     "name": "Shadow of the Warrior",
     "rarity": 5,
     "droppedBy": "Childe",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Shadow_of_the_Warrior.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Shadow_of_the_Warrior.webp"
   },
   {
     "name": "Dvalin's Sigh",
     "rarity": 5,
     "droppedBy": "Dvalin",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Dvalin's_Sigh.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Dvalin's_Sigh.webp"
   },
   {
     "name": "Dvalin's Plume",
     "rarity": 5,
     "droppedBy": "Dvalin",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Dvalin's_Plume.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Dvalin's_Plume.webp"
   },
   {
     "name": "Dvalin's Claw",
     "rarity": 5,
     "droppedBy": "Dvalin",
-    "img": "assets\/img\/weekly-boss-materials\/Item_Dvalin's_Claw.webp"
+    "img": "/assets/img/weekly-boss-materials/Item_Dvalin's_Claw.webp"
   }
 ]

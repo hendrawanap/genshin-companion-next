@@ -1,8 +1,8 @@
-const talentMaterials = require('../../json/talentMaterials.json');
+const weaponMaterial = require('../../json/weaponMaterials.json');
 const domains = require('../../json/domains.json');
 const characters = require('../../json/characters.json');
 
-const talentDomains = domains.filter((domain) => domain.type == 'Domains of Mastery');
+const weaponDomains = domains.filter((domain) => domain.type == 'Domains of Forgery');
 let tasks;
 let initialLevel = 1;
 let initialRuns = 1;
@@ -11,32 +11,37 @@ const rewards = [
   [
     {
       rarity: 2,
-      min: 1,
-      max: 3
+      min: 4,
+      max: 6
     }
   ],
   [
     {
       rarity: 2,
-      min: 1,
+      min: 2,
       max: 3
     },
     {
       rarity: 3,
       min: 1,
-      max: 2
+      max: 3
     },
   ],
   [
     {
       rarity: 2,
-      min: 1,
+      min: 0,
       max: 3
     },
     {
       rarity: 3,
       min: 1,
       max: 3
+    },
+    {
+      rarity: 4,
+      min: 0,
+      max: 2
     },
   ],
   [
@@ -48,12 +53,17 @@ const rewards = [
     {
       rarity: 3,
       min: 0,
-      max: 3
+      max: 4
     },
     {
       rarity: 4,
       min: 0,
       max: 3
+    },
+    {
+      rarity: 5,
+      min: 0,
+      max: 1
     },
   ]
 ]
@@ -61,7 +71,7 @@ const rewards = [
 function makeTasks(domain) {
   const tasks = [];
   for (const sub in domain.subDomains) {
-    const talents = talentMaterials.filter(talent => talent.series == domain.subDomains[sub].series);
+    const weapons = weaponMaterial.filter(talent => talent.series == domain.subDomains[sub].series);
     const requiredBy = characters.filter(character => character.talentMaterial == domain.subDomains[sub].series);
     tasks.push({
       domainName: domain.name,
@@ -76,7 +86,7 @@ function makeTasks(domain) {
       rewards: rewards.map(level => {
         return level.map(reward => {
           return {
-            img: talents.filter(talent => talent.rarity == reward.rarity)[0].img,
+            img: weapons.filter(talent => talent.rarity == reward.rarity)[0].img,
             min: reward.min,
             max: reward.max
           }
@@ -84,7 +94,7 @@ function makeTasks(domain) {
       }),
       requiredBy: requiredBy.map(character => character.name),
       avatars: requiredBy.map(character => character.avatar),
-      possibleRewards: talents.map(talent => talent.img)
+      possibleRewards: weapons.map(talent => talent.img)
     })
   }
   return tasks;
@@ -108,7 +118,7 @@ export function fetchTasks() {
     ar: 36
   }
   setInitialLevelRuns(user);
-  talentDomains.forEach(domain => {
+  weaponDomains.forEach(domain => {
     tasks = tasks.concat(makeTasks(domain));
   });
   return tasks;
@@ -133,7 +143,7 @@ export default async (req, res) => {
   }
   setInitialLevelRuns(user);
   tasks = [];
-  talentDomains.forEach(domain => {
+  weaponDomains.forEach(domain => {
     tasks = tasks.concat(makeTasks(domain));
   });
   const { day, name } = req.query;

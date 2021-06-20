@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Boreal Wolf's Milk Tooth",
+    "rarity": 2,
+    "series": "Boreal Wolf's",
+    "img": "/assets/img/weapon-materials/Item_Boreal_Wolf's_Milk_Tooth.webp"
+  },
+  {
+    "name": "Fetters of the Dandelion Gladiator",
+    "rarity": 2,
+    "series": "Dandelion Gladiator",
+    "img": "/assets/img/weapon-materials/Item_Fetters_of_the_Dandelion_Gladiator.webp"
+  },
+  {
+    "name": "Tile of Decarabian's Tower",
+    "rarity": 2,
+    "series": "Decarabian's",
+    "img": "/assets/img/weapon-materials/Item_Tile_of_Decarabian's_Tower.webp"
+  },
+  {
+    "name": "Boreal Wolf's Cracked Tooth",
+    "rarity": 3,
+    "series": "Boreal Wolf's",
+    "img": "/assets/img/weapon-materials/Item_Boreal_Wolf's_Cracked_Tooth.webp"
+  },
+  {
+    "name": "Chains of the Dandelion Gladiator",
+    "rarity": 3,
+    "series": "Dandelion Gladiator",
+    "img": "/assets/img/weapon-materials/Item_Chains_of_the_Dandelion_Gladiator.webp"
+  },
+  {
+    "name": "Debris of Decarabian's City",
+    "rarity": 3,
+    "series": "Decarabian's",
+    "img": "/assets/img/weapon-materials/Item_Debris_of_Decarabian's_City.webp"
+  },
+  {
+    "name": "Boreal Wolf's Broken Fang",
+    "rarity": 4,
+    "series": "Boreal Wolf's",
+    "img": "/assets/img/weapon-materials/Item_Boreal_Wolf's_Broken_Fang.webp"
+  },
+  {
+    "name": "Fragment of Decarabian's Epic",
+    "rarity": 4,
+    "series": "Decarabian's",
+    "img": "/assets/img/weapon-materials/Item_Fragment_of_Decarabian's_Epic.webp"
+  },
+  {
+    "name": "Shackles of the Dandelion Gladiator",
+    "rarity": 4,
+    "series": "Dandelion Gladiator",
+    "img": "/assets/img/weapon-materials/Item_Shackles_of_the_Dandelion_Gladiator.webp"
+  },
+  {
+    "name": "Boreal Wolf's Nostalgia",
+    "rarity": 5,
+    "series": "Boreal Wolf's",
+    "img": "/assets/img/weapon-materials/Item_Boreal_Wolf's_Nostalgia.webp"
+  },
+  {
+    "name": "Dream of the Dandelion Gladiator",
+    "rarity": 5,
+    "series": "Dandelion Gladiator",
+    "img": "/assets/img/weapon-materials/Item_Dream_of_the_Dandelion_Gladiator.webp"
+  },
+  {
+    "name": "Scattered Piece of Decarabian's Dream",
+    "rarity": 5,
+    "series": "Decarabian's",
+    "img": "/assets/img/weapon-materials/Item_Scattered_Piece_of_Decarabian's_Dream.webp"
+  },
+  {
+    "name": "Grain of Aerosiderite",
+    "rarity": 2,
+    "series": "Aerosiderite",
+    "img": "/assets/img/weapon-materials/Item_Grain_of_Aerosiderite.webp"
+  },
+  {
+    "name": "Luminous Sands from Guyun",
+    "rarity": 2,
+    "series": "Guyun",
+    "img": "/assets/img/weapon-materials/Item_Luminous_Sands_from_Guyun.webp"
+  },
+  {
+    "name": "Mist Veiled Lead Elixir",
+    "rarity": 2,
+    "series": "Mist Veiled Elixir",
+    "img": "/assets/img/weapon-materials/Item_Mist_Veiled_Lead_Elixir.webp"
+  },
+  {
+    "name": "Lustrous Stone from Guyun",
+    "rarity": 3,
+    "series": "Guyun",
+    "img": "/assets/img/weapon-materials/Item_Lustrous_Stone_from_Guyun.webp"
+  },
+  {
+    "name": "Mist Veiled Mercury Elixir",
+    "rarity": 3,
+    "series": "Mist Veiled Elixir",
+    "img": "/assets/img/weapon-materials/Item_Mist_Veiled_Mercury_Elixir.webp"
+  },
+  {
+    "name": "Piece of Aerosiderite",
+    "rarity": 3,
+    "series": "Aerosiderite",
+    "img": "/assets/img/weapon-materials/Item_Piece_of_Aerosiderite.webp"
+  },
+  {
+    "name": "Bit of Aerosiderite",
+    "rarity": 4,
+    "series": "Aerosiderite",
+    "img": "/assets/img/weapon-materials/Item_Bit_of_Aerosiderite.webp"
+  },
+  {
+    "name": "Mist Veiled Gold Elixir",
+    "rarity": 4,
+    "series": "Mist Veiled Elixir",
+    "img": "/assets/img/weapon-materials/Item_Mist_Veiled_Gold_Elixir.webp"
+  },
+  {
+    "name": "Relic from Guyun",
+    "rarity": 4,
+    "series": "Guyun",
+    "img": "/assets/img/weapon-materials/Item_Relic_from_Guyun.webp"
+  },
+  {
+    "name": "Chunk of Aerosiderite",
+    "rarity": 5,
+    "series": "Aerosiderite",
+    "img": "/assets/img/weapon-materials/Item_Chunk_of_Aerosiderite.webp"
+  },
+  {
+    "name": "Divine Body from Guyun",
+    "rarity": 5,
+    "series": "Guyun",
+    "img": "/assets/img/weapon-materials/Item_Divine_Body_from_Guyun.webp"
+  },
+  {
+    "name": "Mist Veiled Primo Elixir",
+    "rarity": 5,
+    "series": "Mist Veiled Elixir",
+    "img": "/assets/img/weapon-materials/Item_Mist_Veiled_Primo_Elixir.webp"
+  }
+]

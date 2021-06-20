@@ -44,7 +44,7 @@ export default function TaskCard(props) {
     return task.rewards[level].map((reward) => {
       return {
         img: reward.img,
-        count: `${reward.min * runs}~${reward.max * runs}`,
+        count: reward.max && `${reward.min * runs}~${reward.max * runs}`,
       };
     });
   };
@@ -255,7 +255,7 @@ function Rewards({rewards}) {
           objectFit="contain"
         />
       </div>
-      {reward.count}
+      {reward.count && reward.count}
     </div>
   ));
 }
