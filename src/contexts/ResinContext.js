@@ -13,7 +13,7 @@ export const ResinProvider = props => {
       fetchUpdateDate();
     }
     const incrementOriginalResin = setInterval(() => {
-      setOriginalResin(originalResin+1);
+      originalResin !== 160 && setOriginalResin(originalResin+1);
     }, 1000 * 60 * 8);
     return () => clearInterval(incrementOriginalResin)
   },[originalResin]);
