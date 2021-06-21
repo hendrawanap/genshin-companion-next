@@ -1,0 +1,1092 @@
+[
+  {
+    "name": "Hunter's Bow",
+    "rarity": 1,
+    "type": "Bow",
+    "baseAtk": 23,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Hunter's_Bow.webp"
+  },
+  {
+    "name": "Seasoned Hunter's Bow",
+    "rarity": 2,
+    "type": "Bow",
+    "baseAtk": 33,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Seasoned_Hunter's_Bow.webp"
+  },
+  {
+    "name": "Messenger",
+    "rarity": 3,
+    "type": "Bow",
+    "baseAtk": 40,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Messenger.webp"
+  },
+  {
+    "name": "Raven Bow",
+    "rarity": 3,
+    "type": "Bow",
+    "baseAtk": 40,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Raven_Bow.webp"
+  },
+  {
+    "name": "Recurve Bow",
+    "rarity": 3,
+    "type": "Bow",
+    "baseAtk": 38,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Recurve_Bow.webp"
+  },
+  {
+    "name": "Sharpshooter's Oath",
+    "rarity": 3,
+    "type": "Bow",
+    "baseAtk": 39,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Sharpshooter's_Oath.webp"
+  },
+  {
+    "name": "Slingshot",
+    "rarity": 3,
+    "type": "Bow",
+    "baseAtk": 38,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Slingshot.webp"
+  },
+  {
+    "name": "Prototype Crescent",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 42,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Prototype_Crescent.webp"
+  },
+  {
+    "name": "Windblume Ode",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 42,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Windblume_Ode.webp"
+  },
+  {
+    "name": "Compound Bow",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 41,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Compound_Bow.webp"
+  },
+  {
+    "name": "Alley Hunter",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 44,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Alley_Hunter.webp"
+  },
+  {
+    "name": "Sacrificial Bow",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 44,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Sacrificial_Bow.webp"
+  },
+  {
+    "name": "Favonius Warbow",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 41,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Favonius_Warbow.webp"
+  },
+  {
+    "name": "Blackcliff Warbow",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 44,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Blackcliff_Warbow.webp"
+  },
+  {
+    "name": "The Stringless",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 42,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_The_Stringless.webp"
+  },
+  {
+    "name": "The Viridescent Hunt",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 42,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_The_Viridescent_Hunt.webp"
+  },
+  {
+    "name": "Mitternachts Waltz",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 42,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Mitternachts_Waltz.webp"
+  },
+  {
+    "name": "Royal Bow",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 42,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Royal_Bow.webp"
+  },
+  {
+    "name": "Rust",
+    "rarity": 4,
+    "type": "Bow",
+    "baseAtk": 42,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Rust.webp"
+  },
+  {
+    "name": "Elegy for the End",
+    "rarity": 5,
+    "type": "Bow",
+    "baseAtk": 46,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Elegy_for_the_End.webp"
+  },
+  {
+    "name": "Skyward Harp",
+    "rarity": 5,
+    "type": "Bow",
+    "baseAtk": 48,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Skyward_Harp.webp"
+  },
+  {
+    "name": "Amos' Bow",
+    "rarity": 5,
+    "type": "Bow",
+    "baseAtk": 46,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Amos'_Bow.webp"
+  },
+  {
+    "name": "Apprentice's Notes",
+    "rarity": 1,
+    "type": "Catalyst",
+    "baseAtk": 23,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Apprentice's_Notes.webp"
+  },
+  {
+    "name": "Pocket Grimoire",
+    "rarity": 2,
+    "type": "Catalyst",
+    "baseAtk": 33,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Pocket_Grimoire.webp"
+  },
+  {
+    "name": "Emerald Orb",
+    "rarity": 3,
+    "type": "Catalyst",
+    "baseAtk": 40,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Emerald_Orb.webp"
+  },
+  {
+    "name": "Twin Nephrite",
+    "rarity": 3,
+    "type": "Catalyst",
+    "baseAtk": 40,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Twin_Nephrite.webp"
+  },
+  {
+    "name": "Magic Guide",
+    "rarity": 3,
+    "type": "Catalyst",
+    "baseAtk": 38,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Magic_Guide.webp"
+  },
+  {
+    "name": "Otherworldly Story",
+    "rarity": 3,
+    "type": "Catalyst",
+    "baseAtk": 39,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Otherworldly_Story.webp"
+  },
+  {
+    "name": "Thrilling Tales of Dragon Slayers",
+    "rarity": 3,
+    "type": "Catalyst",
+    "baseAtk": 39,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Thrilling_Tales_of_Dragon_Slayers.webp"
+  },
+  {
+    "name": "Blackcliff Agate",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 42,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Blackcliff_Agate.webp"
+  },
+  {
+    "name": "The Widsith",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 42,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_The_Widsith.webp"
+  },
+  {
+    "name": "Frostbearer",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 42,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Frostbearer.webp"
+  },
+  {
+    "name": "Mappa Mare",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 44,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Mappa_Mare.webp"
+  },
+  {
+    "name": "Eye of Perception",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 41,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Eye_of_Perception.webp"
+  },
+  {
+    "name": "Wine and Song",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 44,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Wine_and_Song.webp"
+  },
+  {
+    "name": "Dodoco Tales",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 41,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Dodoco_Tales.webp"
+  },
+  {
+    "name": "Favonius Codex",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 42,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Favonius_Codex.webp"
+  },
+  {
+    "name": "Royal Grimoire",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 44,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Royal_Grimoire.webp"
+  },
+  {
+    "name": "Prototype Amber",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 42,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Prototype_Amber.webp"
+  },
+  {
+    "name": "Sacrificial Fragments",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 41,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Sacrificial_Fragments.webp"
+  },
+  {
+    "name": "Solar Pearl",
+    "rarity": 4,
+    "type": "Catalyst",
+    "baseAtk": 42,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Solar_Pearl.webp"
+  },
+  {
+    "name": "Skyward Atlas",
+    "rarity": 5,
+    "type": "Catalyst",
+    "baseAtk": 48,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Skyward_Atlas.webp"
+  },
+  {
+    "name": "Lost Prayer to the Sacred Winds",
+    "rarity": 5,
+    "type": "Catalyst",
+    "baseAtk": 46,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Lost_Prayer_to_the_Sacred_Winds.webp"
+  },
+  {
+    "name": "Memory of Dust",
+    "rarity": 5,
+    "type": "Catalyst",
+    "baseAtk": 46,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Memory_of_Dust.webp"
+  },
+  {
+    "name": "Waster Greatsword",
+    "rarity": 1,
+    "type": "Claymore",
+    "baseAtk": 23,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Waster_Greatsword.webp"
+  },
+  {
+    "name": "Old Merc's Pal",
+    "rarity": 2,
+    "type": "Claymore",
+    "baseAtk": 33,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Old_Merc's_Pal.webp"
+  },
+  {
+    "name": "White Iron Greatsword",
+    "rarity": 3,
+    "type": "Claymore",
+    "baseAtk": 39,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_White_Iron_Greatsword.webp"
+  },
+  {
+    "name": "Skyrider Greatsword",
+    "rarity": 3,
+    "type": "Claymore",
+    "baseAtk": 39,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Skyrider_Greatsword.webp"
+  },
+  {
+    "name": "Debate Club",
+    "rarity": 3,
+    "type": "Claymore",
+    "baseAtk": 39,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Debate_Club.webp"
+  },
+  {
+    "name": "Bloodtainted Greatsword",
+    "rarity": 3,
+    "type": "Claymore",
+    "baseAtk": 38,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Bloodtainted_Greatsword.webp"
+  },
+  {
+    "name": "Ferrous Shadow",
+    "rarity": 3,
+    "type": "Claymore",
+    "baseAtk": 39,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Ferrous_Shadow.webp"
+  },
+  {
+    "name": "The Bell",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 42,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_The_Bell.webp"
+  },
+  {
+    "name": "Whiteblind",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 42,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Whiteblind.webp"
+  },
+  {
+    "name": "Prototype Archaic",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 44,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Prototype_Archaic.webp"
+  },
+  {
+    "name": "Sacrificial Greatsword",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 44,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Sacrificial_Greatsword.webp"
+  },
+  {
+    "name": "Favonius Greatsword",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 41,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Favonius_Greatsword.webp"
+  },
+  {
+    "name": "Lithic Blade",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 42,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Lithic_Blade.webp"
+  },
+  {
+    "name": "Blackcliff Slasher",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 42,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Blackcliff_Slasher.webp"
+  },
+  {
+    "name": "Serpent Spine",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 42,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Serpent_Spine.webp"
+  },
+  {
+    "name": "Snow-Tombed Starsilver",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 44,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Snow-Tombed_Starsilver.webp"
+  },
+  {
+    "name": "Rainslasher",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 42,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Rainslasher.webp"
+  },
+  {
+    "name": "Royal Greatsword",
+    "rarity": 4,
+    "type": "Claymore",
+    "baseAtk": 44,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Royal_Greatsword.webp"
+  },
+  {
+    "name": "Skyward Pride",
+    "rarity": 5,
+    "type": "Claymore",
+    "baseAtk": 48,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Skyward_Pride.webp"
+  },
+  {
+    "name": "Song of Broken Pines",
+    "rarity": 5,
+    "type": "Claymore",
+    "baseAtk": 49,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Song_of_Broken_Pines.webp"
+  },
+  {
+    "name": "The Unforged",
+    "rarity": 5,
+    "type": "Claymore",
+    "baseAtk": 46,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_The_Unforged.webp"
+  },
+  {
+    "name": "Wolf's Gravestone",
+    "rarity": 5,
+    "type": "Claymore",
+    "baseAtk": 46,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Wolf's_Gravestone.webp"
+  },
+  {
+    "name": "Beginner's Protector",
+    "rarity": 1,
+    "type": "Polearm",
+    "baseAtk": 23,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Beginner's_Protector.webp"
+  },
+  {
+    "name": "Iron Point",
+    "rarity": 2,
+    "type": "Polearm",
+    "baseAtk": 33,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Iron_Point.webp"
+  },
+  {
+    "name": "Black Tassel",
+    "rarity": 3,
+    "type": "Polearm",
+    "baseAtk": 38,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Black_Tassel.webp"
+  },
+  {
+    "name": "White Tassel",
+    "rarity": 3,
+    "type": "Polearm",
+    "baseAtk": 39,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_White_Tassel.webp"
+  },
+  {
+    "name": "Halberd",
+    "rarity": 3,
+    "type": "Polearm",
+    "baseAtk": 40,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Halberd.webp"
+  },
+  {
+    "name": "Royal Spear",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 44,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Royal_Spear.webp"
+  },
+  {
+    "name": "Dragonspine Spear",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 41,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Dragonspine_Spear.webp"
+  },
+  {
+    "name": "Deathmatch",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 41,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Deathmatch.webp"
+  },
+  {
+    "name": "Favonius Lance",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 44,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Favonius_Lance.webp"
+  },
+  {
+    "name": "Prototype Starglitter",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 42,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Prototype_Starglitter.webp"
+  },
+  {
+    "name": "Blackcliff Pole",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 42,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Blackcliff_Pole.webp"
+  },
+  {
+    "name": "Lithic Spear",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 44,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Lithic_Spear.webp"
+  },
+  {
+    "name": "Crescent Pike",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 44,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Crescent_Pike.webp"
+  },
+  {
+    "name": "Dragon's Bane",
+    "rarity": 4,
+    "type": "Polearm",
+    "baseAtk": 41,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Dragon's_Bane.webp"
+  },
+  {
+    "name": "Primordial Jade Winged-Spear",
+    "rarity": 5,
+    "type": "Polearm",
+    "baseAtk": 48,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Primordial_Jade_Winged-Spear.webp"
+  },
+  {
+    "name": "Skyward Spine",
+    "rarity": 5,
+    "type": "Polearm",
+    "baseAtk": 48,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Skyward_Spine.webp"
+  },
+  {
+    "name": "Vortex Vanquisher",
+    "rarity": 5,
+    "type": "Polearm",
+    "baseAtk": 46,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Vortex_Vanquisher.webp"
+  },
+  {
+    "name": "Staff of Homa",
+    "rarity": 5,
+    "type": "Polearm",
+    "baseAtk": 46,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Staff_of_Homa.webp"
+  },
+  {
+    "name": "Dull Blade",
+    "rarity": 1,
+    "type": "Sword",
+    "baseAtk": 23,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Dull_Blade.webp"
+  },
+  {
+    "name": "Silver Sword",
+    "rarity": 2,
+    "type": "Sword",
+    "baseAtk": 33,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Silver_Sword.webp"
+  },
+  {
+    "name": "Cool Steel",
+    "rarity": 3,
+    "type": "Sword",
+    "baseAtk": 39,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Cool_Steel.webp"
+  },
+  {
+    "name": "Dark Iron Sword",
+    "rarity": 3,
+    "type": "Sword",
+    "baseAtk": 39,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Dark_Iron_Sword.webp"
+  },
+  {
+    "name": "Fillet Blade",
+    "rarity": 3,
+    "type": "Sword",
+    "baseAtk": 39,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Fillet_Blade.webp"
+  },
+  {
+    "name": "Traveler's Handy Sword",
+    "rarity": 3,
+    "type": "Sword",
+    "baseAtk": 40,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Traveler's_Handy_Sword.webp"
+  },
+  {
+    "name": "Harbinger of Dawn",
+    "rarity": 3,
+    "type": "Sword",
+    "baseAtk": 39,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Harbinger_of_Dawn.webp"
+  },
+  {
+    "name": "Skyrider Sword",
+    "rarity": 3,
+    "type": "Sword",
+    "baseAtk": 38,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Skyrider_Sword.webp"
+  },
+  {
+    "name": "Lion's Roar",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 42,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Lion's_Roar.webp"
+  },
+  {
+    "name": "The Flute",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 42,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_The_Flute.webp"
+  },
+  {
+    "name": "The Alley Flash",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 45,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_The_Alley_Flash.webp"
+  },
+  {
+    "name": "Royal Longsword",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 42,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Royal_Longsword.webp"
+  },
+  {
+    "name": "Sword of Descension",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 39,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Sword_of_Descension.webp"
+  },
+  {
+    "name": "The Black Sword",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 42,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_The_Black_Sword.webp"
+  },
+  {
+    "name": "Prototype Rancour",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 44,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Prototype_Rancour.webp"
+  },
+  {
+    "name": "Iron Sting",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 42,
+    "weaponMaterial": "Aerosiderite",
+    "eliteMaterial": "Bone Shards",
+    "commonMaterial": "Whopperflower Nectar",
+    "img": "/assets/img/weapons/Weapon_Iron_Sting.webp"
+  },
+  {
+    "name": "Blackcliff Longsword",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 44,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Blackcliff_Longsword.webp"
+  },
+  {
+    "name": "Sacrificial Sword",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 41,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Sacrificial_Sword.webp"
+  },
+  {
+    "name": "Favonius Sword",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 41,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Favonius_Sword.webp"
+  },
+  {
+    "name": "Festering Desire",
+    "rarity": 4,
+    "type": "Sword",
+    "baseAtk": 42,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Fatui Insignia",
+    "img": "/assets/img/weapons/Weapon_Festering_Desire.webp"
+  },
+  {
+    "name": "Primordial Jade Cutter",
+    "rarity": 5,
+    "type": "Sword",
+    "baseAtk": 44,
+    "weaponMaterial": "Mist Veiled Elixir",
+    "eliteMaterial": "Mist Grass",
+    "commonMaterial": "Treasure Hoarder Insignias",
+    "img": "/assets/img/weapons/Weapon_Primordial_Jade_Cutter.webp"
+  },
+  {
+    "name": "Skyward Blade",
+    "rarity": 5,
+    "type": "Sword",
+    "baseAtk": 46,
+    "weaponMaterial": "Boreal Wolf's",
+    "eliteMaterial": "Ley Lines",
+    "commonMaterial": "Slime",
+    "img": "/assets/img/weapons/Weapon_Skyward_Blade.webp"
+  },
+  {
+    "name": "Aquila Favonia",
+    "rarity": 5,
+    "type": "Sword",
+    "baseAtk": 48,
+    "weaponMaterial": "Decarabian's",
+    "eliteMaterial": "Hilichurl Horns",
+    "commonMaterial": "Hilichurl Arrowheads",
+    "img": "/assets/img/weapons/Weapon_Aquila_Favonia.webp"
+  },
+  {
+    "name": "Summit Shaper",
+    "rarity": 5,
+    "type": "Sword",
+    "baseAtk": 46,
+    "weaponMaterial": "Guyun",
+    "eliteMaterial": "Sacrificial Knifes",
+    "commonMaterial": "Hilichurl Masks",
+    "img": "/assets/img/weapons/Weapon_Summit_Shaper.webp"
+  },
+  {
+    "name": "Freedom-Sworn",
+    "rarity": 5,
+    "type": "Sword",
+    "baseAtk": 46,
+    "weaponMaterial": "Dandelion Gladiator",
+    "eliteMaterial": "Chaos Parts",
+    "commonMaterial": "Samachurl Scrolls",
+    "img": "/assets/img/weapons/Weapon_Freedom-Sworn.webp"
+  }
+]

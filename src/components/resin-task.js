@@ -3,7 +3,6 @@ import ResinTab from "@/components/resin-tab";
 import TasksTab from "@/components/tasks-tab";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
-import { tasks } from "../models/Tasks";
 
 export default function ResinTask(props) {
   const tabs = [
@@ -13,7 +12,7 @@ export default function ResinTask(props) {
     },
     {
       name: "Tasks",
-      component: () => <TasksTab modalHandler={props.modalHandler} tasks={tasks}/>
+      component: () => <TasksTab modalHandler={props.modalHandler}/>
     },
   ];
   const activeTab = "Tasks";

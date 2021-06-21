@@ -1,0 +1,26 @@
+[
+  {
+    "userId": 1,
+    "name": "Thundercloud",
+    "type": "Weapon Domains",
+    "level": 4,
+    "runs": 3,
+    "day": "Monday"
+  },
+  {
+    "userId": 1,
+    "name": "Frosted Altar",
+    "type": "Talent Domains",
+    "level": 4,
+    "runs": 4,
+    "day": "Monday"
+  },
+  {
+    "userId": 1,
+    "name": "Altar of Flames",
+    "type": "Talent Domains",
+    "level": 4,
+    "runs": 2,
+    "day": "Monday"
+  }
+]

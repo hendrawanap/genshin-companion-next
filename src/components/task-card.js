@@ -52,7 +52,7 @@ export default function TaskCard(props) {
   const initialState = {
     openModal: false,
     expanded: false,
-    rewards: calculateRewards(task.level, task.runs),
+    rewards: calculateRewards(task.level - 1, task.runs),
     runs: task.runs,
     totalCosts: task.runs * task.cost,
     level: task.level
@@ -70,16 +70,16 @@ export default function TaskCard(props) {
       type: 'setRuns',
       runs: runs,
       totalCosts: runs * task.cost,
-      rewards: calculateRewards(state.level, runs)
+      rewards: calculateRewards(state.level - 1, runs)
     });
   };
 
   const setLevel = (level) => {
     let index = parseInt(level.split(" ")[1]);
-    task.type.includes("Domain") ? index-- : index;
+    task.type.includes("Domain") || task.type.includes("Domains") ? index-- : index;
     dispatch({
       type: 'setLevel',
-      level: index,
+      level: parseInt(level.split(" ")[1]),
       rewards: calculateRewards(index, state.runs)
     });
   };
@@ -189,10 +189,10 @@ function ExpandedMenu(props) {
       <div className="flex">
         <div className="mr-8">
           <div className="h-16" style={{ maxWidth: "100px" }}>
-            { props.task.type.includes("Domains") ? "Domain" : "World" } Level:
+            { props.task.type.includes("Domains") || props.task.type.includes("Domain") ? "Domain" : "World" } Level:
             <div className="mt-1">
               <Dropdown
-                activeMenu={ `Level ${props.level + 1}` }
+                activeMenu={ `Level ${props.level}` }
                 menus={ props.task.levels }
                 onChange={ props.setLevel }
               />

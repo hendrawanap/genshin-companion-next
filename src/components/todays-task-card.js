@@ -83,7 +83,7 @@ export default function TodaysTaskCard(props) {
                   <div className="relative flex-shrink-0 w-9 h-9 rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1" key={`avatar-${index}`}>
                     <Image
                       className="rounded-full"
-                      src={"/" + avatar}
+                      src={avatar}
                       alt={props.requiredBy[index]}
                       layout="responsive"
                       width="36px"

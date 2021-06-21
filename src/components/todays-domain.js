@@ -34,7 +34,17 @@ export default function TodaysDomains() {
 }
 
 function TodaysTasks(props) {
-  const today = "Saturday";
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ]
+  const date = new Date();
+  const today = days[date.getDay()];
   const url = `${props.url}?day=${today}`;
   useEffect( async() => {
     const res = await fetch(url);

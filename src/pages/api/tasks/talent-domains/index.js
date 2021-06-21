@@ -102,41 +102,38 @@ function setInitialLevelRuns(user) {
   }
 }
 
-export function fetchTasks() {
-  const user = {
-    name: "Baps",
-    ar: 36
-  }
-  setInitialLevelRuns(user);
-  talentDomains.forEach(domain => {
-    tasks = tasks.concat(makeTasks(domain));
-  });
-  return tasks;
+export function fetchTalentDomains(name, day, requiredBy) {
+  return filterTasks(day, requiredBy, name);
 }
 
-function filterTasks(day, name) {
-  if (day && name) {
-    return tasks.filter(task => task.days.includes(day) && task.requiredBy.includes(name));
+function filterTasks(day, requiredBy, name) {
+  if (day && requiredBy) {
+    return tasks.filter(task => task.days.includes(day) && task.requiredBy.includes(requiredBy));
   } else if (day) {
     return tasks.filter(task => task.days.includes(day));
+  } else if (requiredBy) {
+    return tasks.filter(task => task.requiredBy.includes(requiredBy));
   } else if (name) {
-    return tasks.filter(task => task.requiredBy.includes(name));
+    return tasks.find(task => task.subDomainName === name);
   } else {
     return tasks;
   }
 }
 
+const user = {
+  name: "Baps",
+  ar: 36
+}
+
+setInitialLevelRuns(user);
+tasks = [];
+talentDomains.forEach(domain => {
+  tasks = tasks.concat(makeTasks(domain));
+});
+
 export default async (req, res) => {
-  const user = {
-    name: "Baps",
-    ar: 36
-  }
-  setInitialLevelRuns(user);
-  tasks = [];
-  talentDomains.forEach(domain => {
-    tasks = tasks.concat(makeTasks(domain));
-  });
-  const { day, name } = req.query;
-  const response = filterTasks(day,name);
+  
+  const { day, requiredBy, name } = req.query;
+  const response = filterTasks(day, requiredBy, name);
   res.status(200).json(response);
 }
