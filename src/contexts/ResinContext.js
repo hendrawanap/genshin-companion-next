@@ -7,7 +7,7 @@ export const ResinProvider = props => {
   const [originalResin, setOriginalResin] = useState(0);
   const [condensedResin, setCondensedResin] = useState(0);
   const [updateDate, setUpdateDate] = useState(null);
-  const [firebase, setFirebase] = useState(firebaseInit().firestore());
+  const [firebase, setFirebase] = useState(firebaseInit());
   useEffect(() => {
     if (!updateDate) {
       fetchUpdateDate();
@@ -19,7 +19,7 @@ export const ResinProvider = props => {
   },[originalResin]);
 
   const fetchUpdateDate = async () => {
-    const snapshot = await firebase.collection("resin").where("userId", "==", 1).get()
+    const snapshot = await firebase.firestore().collection("resin").where("userId", "==", 1).get()
                         .then((snapshot) => {
                           return snapshot.docs[0];
                         });
@@ -33,10 +33,18 @@ export const ResinProvider = props => {
     setCondensedResin(condensedResin);
   }
 
+  const updateResin = async (currentResin) => {
+    const docRef = await firebase.firestore().collection("resin").where("userId", "==", 1).get().then((snapshot) => snapshot.docs[0].ref);
+    await docRef.update({
+      originalResin: currentResin,
+      updatedOn: firebase.firestore.FieldValue.serverTimestamp()
+    });
+  }
+
   
   // incrementOriginalResin();
   return (
-    <ResinContext.Provider value={[originalResin, setOriginalResin, condensedResin, setCondensedResin]}>
+    <ResinContext.Provider value={[originalResin, setOriginalResin, condensedResin, setCondensedResin, updateResin]}>
       {props.children}
     </ResinContext.Provider>
   )

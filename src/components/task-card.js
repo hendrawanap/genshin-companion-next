@@ -261,7 +261,7 @@ function Rewards({rewards}) {
 }
 
 function ConsumeResinModal(props) {
-  const [originalResin, setOriginalResin, condensedResin, setCondensedResin] = useContext(ResinContext);
+  const [originalResin, setOriginalResin, condensedResin, setCondensedResin, updateResin] = useContext(ResinContext);
   const resinSource = [
     {
       name: "Original",
@@ -281,7 +281,15 @@ function ConsumeResinModal(props) {
     setCosts(props.cost * done);
   };
 
-  const handleContinue = () => originalResin < props.cost * done ? setInsufficient(true) : props.closeModal();
+  const handleContinue = () => {
+    if (originalResin < props.cost * done) {
+      setInsufficient(true)
+    } else {
+      setOriginalResin(originalResin - costs)
+      updateResin(originalResin - costs);
+      props.closeModal();
+    }
+  };
 
   const handleCancel = () => insufficient ? setInsufficient(false) : props.closeModal();
 
