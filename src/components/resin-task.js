@@ -1,10 +1,20 @@
 import Tabs from "@/components/tabs";
 import ResinTab from "@/components/resin-tab";
 import TasksTab from "@/components/tasks-tab";
-// import { Link } from "react-router-dom";
 import Link from "next/link";
 
 export default function ResinTask(props) {
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ];
+  const date = new Date();
+  const today = days[date.getDay()];
   const tabs = [
     {
       name: "Resin",
@@ -12,10 +22,9 @@ export default function ResinTask(props) {
     },
     {
       name: "Tasks",
-      component: () => <TasksTab modalHandler={props.modalHandler}/>
+      component: () => <TasksTab modalHandler={props.modalHandler} day={today}/>
     },
   ];
-  const activeTab = "Tasks";
   const linkToResinManager = () => (
     <Link
       href="/resin-manager"
@@ -28,7 +37,7 @@ export default function ResinTask(props) {
   );
   return (
     <div className="px-4 mb-8">
-      <Tabs tabs={tabs} activeTab={activeTab} addOn={linkToResinManager()}/>
+      <Tabs tabs={tabs} activeTab={tabs[0].name} addOn={linkToResinManager()}/>
     </div>
   );
 }

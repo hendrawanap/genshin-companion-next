@@ -1,4 +1,4 @@
-import React, { lazy, useState } from "react";
+import React from "react";
 import Welcome from "@/components/welcome";
 import ResinTask from "@/components/resin-task";
 import TodaysDomains from "@/components/todays-domain";

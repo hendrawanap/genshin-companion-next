@@ -6,39 +6,29 @@ import Dropdown from "@/material/dropdown";
 import Image from 'next/image';
 import TasksTab from "@/components/tasks-tab";
 import AddTask from "@/components/add-task";
-import Modal from "@/components/utility/modal";
 import { tasks } from "../models/Tasks";
 import AppLayout from '@/components/layouts/app';
 import BottomSlideOver from '@/components/utility/bottom-slide-over';
 import Button from '@/components/material/button';
-import { weaponTasks } from "../models/Tasks";
 
 export default function ResinManager(props) {
-  const [openModal, setOpenModal] = useState(false);
   const [openSlide, setOpenSlide] = useState(false);
   const days = [
+    'Sunday',
     'Monday',
     'Tuesday',
     'Wednesday',
     'Thursday',
     'Friday',
-    'Saturday',
-    'Sunday'
+    'Saturday'
   ];
-  const [day, setDay] = useState(days[6]);
+  const date = new Date();
+  const today = days[date.getDay()];
+  const [day, setDay] = useState(today);
 
   const dayHandler = (day) => {
     setDay(day);
   }
-
-  // const [talentTasks, setTalentTasks] = useState(weaponTasks);
-  // useEffect( async() => {
-  //   const res = await fetch("/api/tasks/talent-domains");
-  //   const json = await res.json();
-  //   console.log(json);
-  //   setTalentTasks(json);
-  // },[])
-
 
   return(
     <AppLayout>
@@ -59,8 +49,10 @@ export default function ResinManager(props) {
             <div className="text-primary">100</div>
           </div>
         </div>
-        <TasksTab tasks={tasks}/>
-        <Button variant="primary" type="text" icon="add" onClick={() => setOpenSlide(true)}>Add Task</Button>
+        <TasksTab tasks={tasks} day={day}/>
+        <div className="mt-2">
+          <Button variant="primary" type="text" icon="add" onClick={() => setOpenSlide(true)}>Add Task</Button>
+        </div>
       </div>
       <BottomSlideOver isOpen={openSlide} close={() => setOpenSlide(false)}>
         <AddTask closeHandler={() => setOpenSlide(false)}/>

@@ -4,8 +4,8 @@ import { fetchWeaponDomains } from "../tasks/weapon-domains";
 const userTasks = require("@/json/userTasks.json");
 
 export default async(req, res) => {
-  const { userId } = req.query;
-  const filtered = userTasks.filter(task => task.userId === parseInt(userId));
+  const { userId, day } = req.query;
+  const filtered = userTasks.filter(task => task.userId === parseInt(userId) && task.day === day);
   const response = [];
   filtered.forEach((task, index) => {
     if (task.type === "Talent Domains") {

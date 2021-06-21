@@ -6,10 +6,10 @@ export default function TasksTab(props) {
   const users = require("@/json/users.json");
   const user = users[0];
   useEffect( async() => {
-    const res = await fetch(`/api/user-tasks?userId=${user.id}`);
+    const res = await fetch(`/api/user-tasks?userId=${user.id}&day=${props.day}`);
     const json = await res.json();
     setTasks(json);
-  }, [])
+  }, [props.day]);
   return (
     <div className={`flex flex-col gap-y-2`}>
       {tasks && tasks.map((task, index) => (
