@@ -6,6 +6,7 @@ import Counter from "@/material/counter";
 import Modal from "@/components/utility/modal";
 import Image from "next/image";
 import { CSSTransition } from "react-transition-group";
+import { addUserTask, decrementRuns } from "pages/api/user-tasks";
 
 export default function TaskCard(props) {
   const task = props.task;
@@ -125,10 +126,15 @@ export default function TaskCard(props) {
       >
         { props.isAdd ? 
           <AddTaskModal
-            task={ { name: task.name, runs: task.runs } }
+            task={task}
+            runs={state.runs}
+            level={state.level}
+            closeModal={() => dispatch({ type: 'closeModal' })}
           />
           :
           <ConsumeResinModal
+            day={props.day}
+            task={task}
             cost={task.cost}
             runs={task.runs}
             closeModal={() => dispatch({ type: 'closeModal' })}
@@ -260,12 +266,12 @@ function Rewards({rewards}) {
   ));
 }
 
-function ConsumeResinModal(props) {
-  const [originalResin, setOriginalResin, condensedResin, setCondensedResin, updateResin] = useContext(ResinContext);
+function ConsumeResinModal({day, task, cost, runs, closeModal}) {
+  const { intOriResin, setOriginalResin, condensedResin, incrementOriginalResin } = useContext(ResinContext);
   const resinSource = [
     {
       name: "Original",
-      value: originalResin,
+      value: intOriResin,
     },
     {
       name: "Condensed",
@@ -273,25 +279,31 @@ function ConsumeResinModal(props) {
     },
   ];
 
-  const [costs, setCosts] = useState(props.cost);
+  const [costs, setCosts] = useState(cost);
   const [done, setDone] = useState(1);
   const [insufficient, setInsufficient] = useState(false);
   const handleDone = (done) => {
     setDone(done);
-    setCosts(props.cost * done);
+    setCosts(cost * done);
   };
 
   const handleContinue = () => {
-    if (originalResin < props.cost * done) {
+    if (intOriResin < cost * done) {
       setInsufficient(true)
     } else {
-      setOriginalResin(originalResin - costs)
-      updateResin(originalResin - costs);
-      props.closeModal();
+      const userId = 1;
+      const taskInfo = {
+        name: task.name,
+        runs: done,
+        day: day
+      };
+      incrementOriginalResin(-1 * costs);
+      decrementRuns(userId, taskInfo);
+      closeModal();
     }
   };
 
-  const handleCancel = () => insufficient ? setInsufficient(false) : props.closeModal();
+  const handleCancel = () => insufficient ? setInsufficient(false) : closeModal();
 
   return (
     <div className="bg-navbar px-6 py-5 rounded-md">
@@ -319,7 +331,7 @@ function ConsumeResinModal(props) {
               <Counter
                 count={done}
                 min={1}
-                max={props.runs}
+                max={runs}
                 onChange={handleDone}
               />
             </div>
@@ -368,19 +380,49 @@ function ConsumeResinModal(props) {
   );
 }
 
-function AddTaskModal({task}) {
+function AddTaskModal({task, runs, level, closeModal}) {
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ];
+  const date = new Date();
+  const today = days[date.getDay()];
+  const [day, setDay] = useState(today);
+
+  const addTask = async () => {
+    const userId = 1;
+    const taskInfo = {
+      name: task.name,
+      type: task.type,
+      level: level,
+      runs: runs,
+      day: day
+    }
+    addUserTask(userId, taskInfo);
+    closeModal();
+  }
+
+
   return (
     <div className="bg-navbar px-6 py-5 rounded-md">
       <div className="mb-4 text-white text-opacity-80">
         Add Task?
       </div>
+      <div className="" style={{maxHeight: "44px"}}>
+        <Dropdown activeMenu={day} menus={days} minWidth={150} onChange={(day) => setDay(day)}/>
+      </div>
       <div className="text-opacity-80 text-white mt-2">
-        <span className="text-primary">{`${task.name} (x${task.runs})`}</span> will be
+        <span className="text-primary">{`${task.name} (x${runs})`}</span> will be
         added to the task list. Continue?
       </div>
       <div className="flex flex-row-reverse text-white gap-x-8 mt-7">
-        <Button variant="primary" type="text" title="Continue" noPadding={true}/>
-        <Button variant="danger" type="text" title="Cancel" noPadding={true}/>
+        <Button variant="primary" type="text" noPadding={true} onClick={addTask}>Continue</Button>
+        <Button variant="danger" type="text" noPadding={true} onClick={closeModal}>Cancel</Button>
       </div>
     </div>
   );

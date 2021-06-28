@@ -141,7 +141,7 @@ weaponDomains.forEach(domain => {
   tasks = tasks.concat(makeTasks(domain));
 });
 
-export default async (req, res) => {
+export default async function main(req, res) {
   const { day, requiredBy, name } = req.query;
   const response = filterTasks(day, requiredBy, name);
   res.status(200).json(response);

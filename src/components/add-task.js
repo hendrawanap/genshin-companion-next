@@ -68,7 +68,6 @@ export default function AddTask(props) {
     const rewardsContent = (rewards) => {
       return rewards.map((reward, index) => {
         return (
-          
           <div
             className={`relative flex-shrink-0  rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 mr-1 ${
               expanded ? "w-9 h-9" : "w-7 h-7"

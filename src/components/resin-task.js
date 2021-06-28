@@ -2,6 +2,7 @@ import Tabs from "@/components/tabs";
 import ResinTab from "@/components/resin-tab";
 import TasksTab from "@/components/tasks-tab";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function ResinTask(props) {
   const days = [
@@ -15,6 +16,7 @@ export default function ResinTask(props) {
   ];
   const date = new Date();
   const today = days[date.getDay()];
+  const userId = 1;
   const tabs = [
     {
       name: "Resin",
@@ -22,9 +24,17 @@ export default function ResinTask(props) {
     },
     {
       name: "Tasks",
-      component: () => <TasksTab modalHandler={props.modalHandler} day={today}/>
+      component: () => <TasksTab tasks={tasks} day={today}/>
     },
   ];
+  const [tasks, setTasks] = useState(null);
+  
+  useEffect( async() => {
+    const res = await fetch(`/api/user-tasks?userId=${userId}&day=${today}`);
+    const json = await res.json();
+    setTasks(json);
+  }, []);
+
   const linkToResinManager = () => (
     <Link
       href="/resin-manager"

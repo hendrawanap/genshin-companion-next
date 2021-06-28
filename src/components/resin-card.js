@@ -9,7 +9,7 @@ export default function ResinCard(props) {
         <div>
           <h4 className="text-sm text-white text-opacity-medium font-medium">Current</h4>
           <div>
-            <span className="text-3xl font-bold text-primary text-opacity-high">{ props.originalResin }</span><span className="text-xs text-white text-opacity-30 font-medium">/160</span>
+            <span className="text-3xl font-bold text-primary text-opacity-high">{props.originalResin}</span><span className="text-xs text-white text-opacity-30 font-medium">/160</span>
           </div>
           <div className="text-xs text-white text-opacity-disabled whitespace-nowrap">
             Condensed:<span className="text-primary text-opacity-high font-medium"> {props.condensedResin}</span>

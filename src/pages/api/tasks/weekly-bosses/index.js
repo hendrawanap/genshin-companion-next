@@ -71,7 +71,7 @@ function setInitialLevel(rank, levels, isDomain) {
     return 1;
 }
 
-export default async(req, res) => {
+export default async function main(req, res) {
   const user = {
     name: "Baps",
     ar: 45,

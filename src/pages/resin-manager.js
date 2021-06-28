@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import ResinCard from "@/components/resin-card";
 import { ResinContext } from '../contexts/ResinContext';
 import Counter from "@/material/counter";
@@ -6,7 +6,6 @@ import Dropdown from "@/material/dropdown";
 import Image from 'next/image';
 import TasksTab from "@/components/tasks-tab";
 import AddTask from "@/components/add-task";
-import { tasks } from "../models/Tasks";
 import AppLayout from '@/components/layouts/app';
 import BottomSlideOver from '@/components/utility/bottom-slide-over';
 import Button from '@/components/material/button';
@@ -25,6 +24,15 @@ export default function ResinManager(props) {
   const date = new Date();
   const today = days[date.getDay()];
   const [day, setDay] = useState(today);
+  const [tasks, setTasks] = useState(null);
+  const [totalCosts, setTotalCosts] = useState(0);
+  const userId = 1;
+  useEffect( async() => {
+    const res = await fetch(`/api/user-tasks?userId=${userId}&day=${day}`);
+    const json = await res.json();
+    setTasks(json);
+    setTotalCosts(json.length && json.map(task => task.cost * task.runs).reduce((acc, curr) => acc + curr));
+  }, [day]);
 
   const dayHandler = (day) => {
     setDay(day);
@@ -46,7 +54,7 @@ export default function ResinManager(props) {
           <div className="flex items-center">
             <div className="text-white text-opacity-60 mr-2">Required:</div>
             <div className="relative h-4 w-4 mr-1"><Image src="/assets/img/other-materials/Item_Fragile_Resin.png" layout="fill" objectFit="contain"></Image></div>
-            <div className="text-primary">100</div>
+            <div className="text-primary">{ totalCosts }</div>
           </div>
         </div>
         <TasksTab tasks={tasks} day={day}/>
@@ -62,22 +70,50 @@ export default function ResinManager(props) {
 }
 
 function Resin(props) {
-  const [originalResin, setOriginalResin, condensedResin, setCondensedResin] = useContext(ResinContext);
+  const { intOriResin, condensedResin } = useContext(ResinContext);
   return(
     <div className="px-4 py-3 border border-dark-15 rounded-xl mr-8">
-      <ResinCard originalResin={ originalResin } condensedResin={ condensedResin }/>
+      <ResinCard originalResin={ intOriResin } condensedResin={ condensedResin }/>
     </div>
   );
 }
 
 function ResinSetter(props) {
-  const [originalResin, setOriginalResin, condensedResin, setCondensedResin] = useContext(ResinContext);
+  const { intOriResin, condensedResin, dispatch, incrementOriginalResin } = useContext(ResinContext);
+  // const reducer = (state, action) => {
+  //   switch(action.type) {
+  //     case 'setOriginalResin':
+  //       return { ...state, originalResin: action.payload };
+  //     case 'setCondensedResin':
+  //       return { ...state, condensedResin: action.payload };
+  //   }
+  // };
+  // const initialState = { originalResin: originalResin, condensedResin: condensedResin }
+  // const [state, setState] = useState({ originalResin, condensedResin})
+  // const [state, dispatch] = useReducer(reducer, initialState);
+  // const isChanged = () => originalResin !== state.originalResin || condensedResin !== state.condensedResin;
+
+  let t;
+  const handleOriginalResinChange = (payload) => {
+    clearTimeout(t);
+    console.log('clicked');
+    // dispatch({ type: 'setOriginalResin', payload: payload });
+    t = setTimeout(() => {
+      incrementOriginalResin(payload - originalResin);
+      console.log(payload - originalResin);
+    }, 2000);
+  }
+
   return (
     <div>
       <div className="mb-1 text-white text-opacity-medium">Set Current Resin</div>
-      <Counter count={originalResin} min={0} max={1000} onChange={setOriginalResin}/>
+      <Counter count={intOriResin} min={0} max={1000} onChange={(payload) => incrementOriginalResin(payload - intOriResin)}/>
       <div className="mb-1 mt-2 text-white text-opacity-medium">Condensed Resin</div>
-      <Counter count={condensedResin} min={0} max={5} onChange={setCondensedResin}/>
+      <Counter count={condensedResin} min={0} max={5} onChange={(payload) => dispatch({ type: 'setCondensedResin', payload: payload})}/>
+      {/* <div className={`flex-row-reverse mt-7 mb-1 gap-x-8 ${(isChanged && !props.isAdd) ? 'flex' : 'hidden'}`}>
+        <Button variant="primary" type="text" icon="save" noPadding={true}>Save</Button>
+        <Button variant="danger" type="text" icon="clear" noPadding={true} onClick={props.reset}>Cancel</Button>
+      </div> */}
     </div>
   );
 }

@@ -2,7 +2,6 @@ import Header from "@/components/app/header";
 import NavigationBar from "@/components/app/navigation-bar";
 import { useState } from "react";
 import Head from "next/head";
-import { ResinProvider } from "@/contexts/ResinContext";
 
 export default function AppLayout(props) {
   return (
@@ -13,11 +12,9 @@ export default function AppLayout(props) {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       </Head>
-      <ResinProvider>
-        <AppContent>
-          {props.children}
-        </AppContent>
-      </ResinProvider>
+      <AppContent>
+        {props.children}
+      </AppContent>
       <div id="modal-1"></div>
       <div id="bottom-slide-over"></div>
     </>
