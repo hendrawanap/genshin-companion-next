@@ -13,7 +13,7 @@ export const UserProvider = props => {
     }
   }
   const initialState = {
-    userId: 1,
+    userId: 2,
     ar: 56,
     mainCharacter: 'Lumine',
     nickname: 'Tabibito',

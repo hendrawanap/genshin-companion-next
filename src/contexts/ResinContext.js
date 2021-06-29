@@ -1,4 +1,4 @@
-import { fetchUserResin } from 'pages/api/resin';
+import { fetchUserResin, updateUserResin } from 'pages/api/resin';
 import React, {useState, createContext, useEffect, useReducer, useContext} from 'react';
 import firebaseInit from '../../firebase/init';
 import { UserContext } from './UserContext';
@@ -41,7 +41,6 @@ export const ResinProvider = props => {
     condensedResin: 0,
     updatedOn: null,
     fetchTime: null,
-    firebase: firebaseInit(),
     timer: null
   };
   const MAX_ORIGINAL_RESIN = 160;
@@ -52,22 +51,19 @@ export const ResinProvider = props => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { userId } = useContext(UserContext);
 
-  useEffect(async () => {
+  useEffect(async() => {
     const { intOriResin, floatOriResin, millisFullAt, timer } = state;
     if (!state.updatedOn) {
-      await calculateCurrentResin();
-    } else {
+      const userResin = await fetchUserResin(userId);
+      calculateCurrentResin(userResin);
+    } else if (intOriResin !== MAX_ORIGINAL_RESIN) {
       const incrementOriResin = () => {
-        if (intOriResin !== MAX_ORIGINAL_RESIN) {
-          const firebase = firebaseInit();
-          const now = firebase.firestore.Timestamp.now().toMillis();
-          const currentFloatOriResin = floatOriResin + 1 / MINUTES_PER_RESIN;
-          const currentIntOriResin = parseInt(currentFloatOriResin);
-          dispatch({ type: 'setFloatOriResin', payload: currentFloatOriResin });
-          currentIntOriResin !== intOriResin && dispatch({ type: 'setIntOriResin', payload: currentIntOriResin});
-        }
+        const currentFloatOriResin = floatOriResin + 1 / MINUTES_PER_RESIN;
+        const currentIntOriResin = parseInt(currentFloatOriResin);
+        dispatch({ type: 'setFloatOriResin', payload: currentFloatOriResin });
+        currentIntOriResin !== intOriResin && dispatch({ type: 'setIntOriResin', payload: currentIntOriResin});
       };
-  
+
       dispatch({
         type: 'setTimer',
         payload: setTimeout(() => {
@@ -75,15 +71,13 @@ export const ResinProvider = props => {
         calculateTimeRemaining(millisFullAt);
       }, SECOND_TO_MILLIS * MINUTE_TO_SECOND),
       });
-  
+      
       return () => clearTimeout(timer);
     }
   }, [state.timeRemaining]);
 
-  const calculateCurrentResin = async () => {
-    const { updatedOn, condensedResin, originalResin } = await fetchUserResin(userId);
-    const firebase = firebaseInit();
-    const now = firebase.firestore.Timestamp.now().toMillis();
+  const calculateCurrentResin = (userResin) => {
+    const { updatedOn, condensedResin, originalResin, now } = userResin;
     const resinAdded = calculateResinAdded(now, updatedOn);
     const currentOriResin = originalResin + resinAdded;
     dispatch({ type: 'setFloatOriResin', payload: currentOriResin > MAX_ORIGINAL_RESIN ? MAX_ORIGINAL_RESIN : currentOriResin });
@@ -96,20 +90,13 @@ export const ResinProvider = props => {
   const calculateResinAdded = (now, updatedOn) => (now - updatedOn) / SECOND_TO_MILLIS / MINUTE_TO_SECOND / MINUTES_PER_RESIN;
 
   const incrementOriginalResin = async (value) => {
-    clearTimeout(state.timer);
-    const firebase = firebaseInit();
-    const { floatOriResin, updatedOn } = state;
-    const now = firebase.firestore.Timestamp.now().toMillis();
+    const { floatOriResin } = state;
     const newCurrentResin = floatOriResin + value;
-    const snapshot = await firebase.firestore().collection("resin").where("userId", "==", 1).get();
-    const doc = snapshot.docs[0];
-    const res = await doc.ref.update({
-      originalResin: newCurrentResin,
-      updatedOn: firebase.firestore.FieldValue.serverTimestamp()
-    });
+    const updatedOn = await updateUserResin(userId, newCurrentResin);
+    clearTimeout(state.timer);
     dispatch({ type: 'setIntOriResin', payload: parseInt(newCurrentResin) });
     dispatch({ type: 'setFloatOriResin', payload: newCurrentResin });
-    dispatch({ type: 'setUpdatedOn', payload: now });
+    dispatch({ type: 'setUpdatedOn', payload: updatedOn });
     calculateFullAt(updatedOn, newCurrentResin);
   };
 

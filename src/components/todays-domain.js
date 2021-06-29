@@ -5,10 +5,6 @@ import { useEffect, useState } from "react";
 export default function TodaysDomains() {
   const tabs = [
     {
-      name: "All",
-      component: () => <TodaysTasks url="/api/tasks/weapon-domains"/>
-    },
-    {
       name: "Weapon",
       component: () => <TodaysTasks url="/api/tasks/weapon-domains"/>
     },
@@ -43,21 +39,18 @@ function TodaysTasks(props) {
   const date = new Date();
   const today = days[date.getDay()];
   const url = `${props.url}?day=${today}`;
+  const [tasks, setTasks] = useState(null);
+
   useEffect( async() => {
     const res = await fetch(url);
     const json = await res.json();
     setTasks(json);
-  },[])
-  const [tasks, setTasks] = useState(null);
+  },[]);
 
   return (
     <div className={`tracking-wider`}>
-      { tasks
-        ? tasks.map((task, index) => (
-          <TodaysTaskCard today={today} name={task.domainName} rewards={task.possibleRewards} requiredBy={task.requiredBy} avatars={task.avatars} key={`task-${index}`} />
-        ))
-        : <div>Loading...</div>
-      }
+      { !tasks && <div>Loading...</div> }
+      { tasks && tasks.map((task, index) => <TodaysTaskCard today={today} name={task.domainName} rewards={task.possibleRewards} requiredBy={task.requiredBy} avatars={task.avatars} key={`task-${index}`} />) }
     </div>
   );
 }
