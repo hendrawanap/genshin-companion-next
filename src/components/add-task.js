@@ -1,42 +1,90 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import Tabs from "@/components/tabs";
 import TaskCard from "@/components/task-card";
 import { talentTasks, weaponTasks, outcropsTasks } from "../models/Tasks";
 import Image from "next/image";
+import { UserContext } from "@/contexts/UserContext";
 
 export default function AddTask(props) {
-  
+  const { ar, wl } = useContext(UserContext);
+  const reducer = (state, action) => {
+    const { type, payload } = action;
+    switch(type) {
+      case 'fetchTalentDomains':
+        return { ...state, talentDomains: payload };
+      case 'fetchWeaponDomains':
+        return { ...state, weaponDomains: payload };
+      case 'fetchWeeklyBosses':
+        return { ...state, weeklyBosses: payload };
+      default:
+        console.log(`No such command exists: "${type}"`);
+        return state;
+    }
+  }
+  const initialState = {
+    talentDomains: null,
+    weaponDomains: null,
+    weeklyBosses: null
+  }
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  const [tabs, setTabs] = useState([
+  const joinAllTasks = () => {
+    const { talentDomains, weaponDomains, weeklyBosses } = state;
+    if (talentDomains && weaponDomains && weeklyBosses) {
+      return [...talentDomains, ...weaponDomains, ...weeklyBosses];
+    } else {
+      return null;
+    }
+  };
+
+  const tabs = [
     {
       name: "All",
-      component: () => <TasksTab url="/api/tasks/talent-domains"/>
+      component: () => <TasksTab tasks={joinAllTasks()}/>
     },
     {
       name: "Artefact",
-      component: () => <TasksTab url="/api/tasks/talent-domains"/>
+      component: () => <TasksTab tasks={state.talentDomains}/>
     },
     {
       name: "Boss",
-      component: () => <TasksTab url="/api/tasks/talent-domains"/>
+      component: () => <TasksTab tasks={state.talentDomains}/>
     },
     {
       name: "Talent",
-      component: () => <TasksTab url="/api/tasks/talent-domains"/>
+      component: () => <TasksTab tasks={state.talentDomains}/>
     },
     {
       name: "Outcrops",
-      component: () => <TasksTab url="/api/tasks/talent-domains"/>
+      component: () => <TasksTab tasks={state.talentDomains}/>
     },
     {
       name: "Weapon",
-      component: () => <TasksTab url="/api/tasks/weapon-domains"/>
+      component: () => <TasksTab tasks={state.weaponDomains}/>
     },
     {
       name: "Weekly Boss",
-      component: () => <TasksTab url="/api/tasks/weekly-bosses"/>
+      component: () => <TasksTab tasks={state.weeklyBosses}/>
     },
-  ]);
+  ];
+
+  useEffect(async() => {
+    const res = await fetch(`/api/tasks/talent-domains?ar=${ar}`);
+    const json = await res.json();
+    dispatch({ type: 'fetchTalentDomains', payload: json });
+  },[]);
+
+  useEffect(async() => {
+    const res = await fetch(`/api/tasks/weapon-domains?ar=${ar}`);
+    const json = await res.json();
+    dispatch({ type: 'fetchWeaponDomains', payload: json });
+  },[]);
+
+  useEffect(async() => {
+    const res = await fetch(`/api/tasks/weekly-bosses?ar=${ar}&wl=${wl}`);
+    const json = await res.json();
+    dispatch({ type: 'fetchWeeklyBosses', payload: json });
+  },[]);
 
   return (
     <div className="bg-navbar h-screen px-4 overflow-y-auto scrollbar-hide">
@@ -60,7 +108,7 @@ export default function AddTask(props) {
           <span className="material-icons mr-2 text-lg leading-none">filter_list</span><span className="text-sm">Filters</span>
         </button>
       </div>
-      <Tabs tabs={tabs} activeTab={tabs[0].name} />
+      <Tabs tabs={tabs} activeTab={tabs[3].name} />
     </div>
   );
   function TaskCardContent(props) {
@@ -135,15 +183,7 @@ export default function AddTask(props) {
       </div>
     );
   }
-  function TasksTab(props) {
-    useEffect( async() => {
-      const res = await fetch(props.url);
-      const json = await res.json();
-      setTasks(json);
-    },[])
-
-    const [tasks, setTasks] = useState(null);
-
+  function TasksTab({tasks}) {
     return (
       <div className={`flex flex-col`}>
         {tasks && tasks.map((task, index) => <TaskCardContent task={task} key={`task-${index}`}/>)}

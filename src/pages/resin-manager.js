@@ -27,16 +27,17 @@ export default function ResinManager(props) {
   const [tasks, setTasks] = useState(null);
   const [totalCosts, setTotalCosts] = useState(0);
   const userId = 1;
-  useEffect( async() => {
+  
+  const dayHandler = (day) => {
+    setDay(day);
+  }
+
+  useEffect(async() => {
     const res = await fetch(`/api/user-tasks?userId=${userId}&day=${day}`);
     const json = await res.json();
     setTasks(json);
     setTotalCosts(json.length && json.map(task => task.cost * task.runs).reduce((acc, curr) => acc + curr));
   }, [day]);
-
-  const dayHandler = (day) => {
-    setDay(day);
-  }
 
   return(
     <AppLayout>
@@ -96,41 +97,31 @@ function Resin(props) {
 }
 
 function ResinSetter(props) {
-  const { intOriResin, condensedResin, dispatch, incrementOriginalResin } = useContext(ResinContext);
-  // const reducer = (state, action) => {
-  //   switch(action.type) {
-  //     case 'setOriginalResin':
-  //       return { ...state, originalResin: action.payload };
-  //     case 'setCondensedResin':
-  //       return { ...state, condensedResin: action.payload };
-  //   }
-  // };
-  // const initialState = { originalResin: originalResin, condensedResin: condensedResin }
-  // const [state, setState] = useState({ originalResin, condensedResin})
-  // const [state, dispatch] = useReducer(reducer, initialState);
-  // const isChanged = () => originalResin !== state.originalResin || condensedResin !== state.condensedResin;
+  const calculateMaxCondensedResin = (currentOriResin, currentCondensedResin) => {
+    const LIMIT = 5;
+    const max = parseInt(currentOriResin / 40) + currentCondensedResin;
+    return max > LIMIT ? LIMIT : max;
+  };
 
-  let t;
-  const handleOriginalResinChange = (payload) => {
-    clearTimeout(t);
-    console.log('clicked');
-    // dispatch({ type: 'setOriginalResin', payload: payload });
-    t = setTimeout(() => {
-      incrementOriginalResin(payload - originalResin);
-      console.log(payload - originalResin);
-    }, 2000);
-  }
+  const ORI_RESIN_PER_CONDENSED = 40;
+
+  const { intOriResin, condensedResin, incrementCondensedResin, incrementOriginalResin } = useContext(ResinContext);
+  const [maxCondensedResin, setMaxCondensedResin] = useState(calculateMaxCondensedResin(intOriResin, condensedResin));
 
   return (
     <div>
       <div className="mb-1 text-white text-opacity-medium">Set Current Resin</div>
-      <Counter count={intOriResin} min={0} max={1000} onChange={(payload) => incrementOriginalResin(payload - intOriResin)}/>
+      <Counter count={intOriResin} min={0} max={1000} onChange={(payload) => incrementOriginalResin(payload - intOriResin)} />
       <div className="mb-1 mt-2 text-white text-opacity-medium">Condensed Resin</div>
-      <Counter count={condensedResin} min={0} max={5} onChange={(payload) => dispatch({ type: 'setCondensedResin', payload: payload})}/>
-      {/* <div className={`flex-row-reverse mt-7 mb-1 gap-x-8 ${(isChanged && !props.isAdd) ? 'flex' : 'hidden'}`}>
-        <Button variant="primary" type="text" icon="save" noPadding={true}>Save</Button>
-        <Button variant="danger" type="text" icon="clear" noPadding={true} onClick={props.reset}>Cancel</Button>
-      </div> */}
+      <Counter
+        count={condensedResin}
+        min={0}
+        max={maxCondensedResin}
+        onChange={(payload) => {
+          incrementCondensedResin(payload - condensedResin);
+          incrementOriginalResin((payload - condensedResin) * -1 * ORI_RESIN_PER_CONDENSED);
+        }}
+      />
     </div>
   );
 }

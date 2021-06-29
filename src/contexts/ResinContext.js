@@ -1,4 +1,4 @@
-import { fetchUserResin, updateUserResin } from 'pages/api/resin';
+import { fetchUserResin, updateUserCondensedResin, updateUserOriginalResin } from 'pages/api/resin';
 import React, {useState, createContext, useEffect, useReducer, useContext} from 'react';
 import firebaseInit from '../../firebase/init';
 import { UserContext } from './UserContext';
@@ -92,12 +92,13 @@ export const ResinProvider = props => {
   const incrementOriginalResin = async (value) => {
     const { floatOriResin } = state;
     const newCurrentResin = floatOriResin + value;
-    const updatedOn = await updateUserResin(userId, newCurrentResin);
+    const updatedOn = await updateUserOriginalResin(userId, newCurrentResin);
     clearTimeout(state.timer);
     dispatch({ type: 'setIntOriResin', payload: parseInt(newCurrentResin) });
     dispatch({ type: 'setFloatOriResin', payload: newCurrentResin });
     dispatch({ type: 'setUpdatedOn', payload: updatedOn });
     calculateFullAt(updatedOn, newCurrentResin);
+    console.log('increment original resin');
   };
 
   const calculateFullAt = (updatedOn, floatOriResin) => {
@@ -119,8 +120,16 @@ export const ResinProvider = props => {
     dispatch({ type: 'setTimeRemaining', payload: { hours: hoursRemaining, minutes: minutesRemaining }});
   }
 
+  const incrementCondensedResin = async(value) => {
+    const { condensedResin } = state;
+    const newCurrentResin = condensedResin + value;
+    await updateUserCondensedResin(userId, newCurrentResin);
+    dispatch({ type: 'setCondensedResin', payload: newCurrentResin });
+    console.log('increment condensed resin');
+  }
+
   return (
-    <ResinContext.Provider value={{ ...state, dispatch, incrementOriginalResin }}>
+    <ResinContext.Provider value={{ ...state, incrementCondensedResin, incrementOriginalResin }}>
       {props.children}
     </ResinContext.Provider>
   );

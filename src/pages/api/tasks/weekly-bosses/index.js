@@ -13,7 +13,6 @@ function makeTask(boss, isDiscounted, ar, wl) {
   const rewards = [];
   const isDomain = boss.type.includes("Domain");
   const requiredBy = characters.filter(character => bossMaterials.map(material => material.name).includes(character.weeklyBossMaterial));
-  // console.log(bossMaterials.map(material => material.name));
   let i = 1;
   for (const level in boss.rewards) {
     const split = level.split("_");
@@ -71,11 +70,12 @@ function setInitialLevel(rank, levels, isDomain) {
     return 1;
 }
 
-export default async function main(req, res) {
-  const user = {
-    name: "Baps",
-    ar: 45,
-    wl: 6
+export default async function handler(req, res) {
+  const { ar, wl } = req.query;
+  if (!tasks) {
+    tasks = weeklyBosses.map(boss => makeTask(boss, false, ar, wl));
+  } else {
+    console.log(`not first time`);
   }
-  res.status(200).json(weeklyBosses.map(boss => makeTask(boss, false, user.ar, user.wl)));
+  res.status(200).json(tasks);
 }

@@ -12,13 +12,20 @@ export async function fetchUserResin(userId) {
   return { updatedOn, condensedResin, originalResin, now, docRef };
 }
 
-export async function updateUserResin(userId, currentResin) {
+export async function updateUserOriginalResin(userId, currentResin) {
   const { now, docRef } = await fetchUserResin(userId);
   await docRef.update({
     originalResin: currentResin,
     updatedOn: firebaseInit().firestore.FieldValue.serverTimestamp()
   });
   return now;
+}
+
+export async function updateUserCondensedResin(userId, currentResin) {
+  const { docRef } = await fetchUserResin(userId);
+  await docRef.update({
+    condensedResin: currentResin
+  });
 }
 
 
