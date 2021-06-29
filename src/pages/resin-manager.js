@@ -57,13 +57,30 @@ export default function ResinManager(props) {
             <div className="text-primary">{ totalCosts }</div>
           </div>
         </div>
-        <TasksTab tasks={tasks} day={day}/>
+        <TasksTab
+          tasks={tasks}
+          day={day}
+          changeHandler={ async() => {
+            const res = await fetch(`/api/user-tasks?userId=${userId}&day=${day}`);
+            const json = await res.json();
+            setTasks(json);
+            setTotalCosts(json.length && json.map(task => task.cost * task.runs).reduce((acc, curr) => acc + curr));
+          }}
+        />
         <div className="mt-2">
           <Button variant="primary" type="text" icon="add" onClick={() => setOpenSlide(true)}>Add Task</Button>
         </div>
       </div>
       <BottomSlideOver isOpen={openSlide} close={() => setOpenSlide(false)}>
-        <AddTask closeHandler={() => setOpenSlide(false)}/>
+        <AddTask
+          closeHandler={ async() => {
+            setOpenSlide(false);
+            const res = await fetch(`/api/user-tasks?userId=${userId}&day=${day}`);
+            const json = await res.json();
+            setTasks(json);
+            setTotalCosts(json.length && json.map(task => task.cost * task.runs).reduce((acc, curr) => acc + curr));
+          }}
+        />
       </BottomSlideOver>
     </AppLayout>
   );

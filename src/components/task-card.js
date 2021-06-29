@@ -138,6 +138,8 @@ export default function TaskCard(props) {
             cost={task.cost}
             runs={task.runs}
             closeModal={() => dispatch({ type: 'closeModal' })}
+            onChange = {props.onChange}
+            setRuns = {(runs) => setRuns(runs)}
           />
         }
       </Modal>
@@ -266,7 +268,7 @@ function Rewards({rewards}) {
   ));
 }
 
-function ConsumeResinModal({day, task, cost, runs, closeModal}) {
+function ConsumeResinModal({day, task, cost, runs, closeModal, onChange, setRuns}) {
   const { intOriResin, setOriginalResin, condensedResin, incrementOriginalResin } = useContext(ResinContext);
   const resinSource = [
     {
@@ -287,7 +289,7 @@ function ConsumeResinModal({day, task, cost, runs, closeModal}) {
     setCosts(cost * done);
   };
 
-  const handleContinue = () => {
+  const handleContinue = async () => {
     if (intOriResin < cost * done) {
       setInsufficient(true)
     } else {
@@ -298,7 +300,9 @@ function ConsumeResinModal({day, task, cost, runs, closeModal}) {
         day: day
       };
       incrementOriginalResin(-1 * costs);
-      decrementRuns(userId, taskInfo);
+      await decrementRuns(userId, taskInfo);
+      onChange();
+      setRuns(runs - done);
       closeModal();
     }
   };

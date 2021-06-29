@@ -1,6 +1,7 @@
 import { fetchUserResin } from 'pages/api/resin';
-import React, {useState, createContext, useEffect, useReducer} from 'react';
+import React, {useState, createContext, useEffect, useReducer, useContext} from 'react';
 import firebaseInit from '../../firebase/init';
+import { UserContext } from './UserContext';
 
 export const ResinContext = createContext();
 
@@ -49,7 +50,7 @@ export const ResinProvider = props => {
   const HOUR_TO_MINUTE = 60;
   const MINUTES_PER_RESIN = 8;
   const [state, dispatch] = useReducer(reducer, initialState);
-  const userId = 1;
+  const { userId } = useContext(UserContext);
 
   useEffect(async () => {
     const { intOriResin, floatOriResin, millisFullAt, timer } = state;
@@ -84,8 +85,9 @@ export const ResinProvider = props => {
     const firebase = firebaseInit();
     const now = firebase.firestore.Timestamp.now().toMillis();
     const resinAdded = calculateResinAdded(now, updatedOn);
-    dispatch({ type: 'setFloatOriResin', payload: originalResin + resinAdded });
-    dispatch({ type: 'setIntOriResin', payload: parseInt(originalResin + resinAdded) });
+    const currentOriResin = originalResin + resinAdded;
+    dispatch({ type: 'setFloatOriResin', payload: currentOriResin > MAX_ORIGINAL_RESIN ? MAX_ORIGINAL_RESIN : currentOriResin });
+    dispatch({ type: 'setIntOriResin', payload: currentOriResin > MAX_ORIGINAL_RESIN ? MAX_ORIGINAL_RESIN : parseInt(currentOriResin) });
     dispatch({ type: 'setUpdatedOn', payload: updatedOn });
     dispatch({ type: 'setCondensedResin', payload: condensedResin });
     calculateFullAt(updatedOn, originalResin);

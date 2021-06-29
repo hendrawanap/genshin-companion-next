@@ -1,4 +1,5 @@
 import { ResinProvider } from '@/contexts/ResinContext'
+import { UserProvider } from '@/contexts/UserContext'
 import '../styles/globals.css'
 
 // function MyApp({ Component, pageProps }) {
@@ -11,9 +12,11 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ResinProvider>
-      <Component {...pageProps} />
-    </ResinProvider>
+    <UserProvider>
+      <ResinProvider>
+        <Component {...pageProps} />
+      </ResinProvider>
+    </UserProvider>
   )
 }
 

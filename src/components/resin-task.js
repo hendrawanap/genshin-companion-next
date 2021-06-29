@@ -2,9 +2,11 @@ import Tabs from "@/components/tabs";
 import ResinTab from "@/components/resin-tab";
 import TasksTab from "@/components/tasks-tab";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "@/contexts/UserContext";
 
 export default function ResinTask(props) {
+  const { userId } = useContext(UserContext);
   const days = [
     'Sunday',
     'Monday',
@@ -16,7 +18,6 @@ export default function ResinTask(props) {
   ];
   const date = new Date();
   const today = days[date.getDay()];
-  const userId = 1;
   const tabs = [
     {
       name: "Resin",
@@ -24,16 +25,28 @@ export default function ResinTask(props) {
     },
     {
       name: "Tasks",
-      component: () => <TasksTab tasks={tasks} day={today}/>
+      component: () => <TasksTab
+        tasks={tasks}
+        day={today}
+        changeHandler={ async() => {
+          const json = await fetchTasks();
+          setTasks(json);
+        }}
+      />
     },
   ];
   const [tasks, setTasks] = useState(null);
   
-  useEffect( async() => {
-    const res = await fetch(`/api/user-tasks?userId=${userId}&day=${today}`);
-    const json = await res.json();
+  useEffect(async() => {
+    const json = await fetchTasks();
     setTasks(json);
   }, []);
+
+  const fetchTasks = async() => {
+    const res = await fetch(`/api/user-tasks?userId=${userId}&day=${today}`);
+    const json = await res.json();
+    return json;
+  }
 
   const linkToResinManager = () => (
     <Link

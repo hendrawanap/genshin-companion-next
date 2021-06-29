@@ -7,7 +7,7 @@ import AppLayout from "@/components/layouts/app";
 export default function Home() {
   return (
     <AppLayout>
-      <Welcome name="Tabibito"/>
+      <Welcome/>
       <ResinTask/>
       <TodaysDomains/>
     </AppLayout>
