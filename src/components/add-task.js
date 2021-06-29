@@ -16,6 +16,8 @@ export default function AddTask(props) {
         return { ...state, weaponDomains: payload };
       case 'fetchWeeklyBosses':
         return { ...state, weeklyBosses: payload };
+      case 'addToAllTasks':
+        return { ...state, allTasks: [...state.allTasks, ...payload]}
       default:
         console.log(`No such command exists: "${type}"`);
         return state;
@@ -24,23 +26,17 @@ export default function AddTask(props) {
   const initialState = {
     talentDomains: null,
     weaponDomains: null,
-    weeklyBosses: null
+    weeklyBosses: null,
+    allTasks: [],
   }
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  const joinAllTasks = () => {
-    const { talentDomains, weaponDomains, weeklyBosses } = state;
-    if (talentDomains && weaponDomains && weeklyBosses) {
-      return [...talentDomains, ...weaponDomains, ...weeklyBosses];
-    } else {
-      return null;
-    }
-  };
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const today = days[new Date().getDay()];
 
   const tabs = [
     {
       name: "All",
-      component: () => <TasksTab tasks={joinAllTasks()}/>
+      component: () => <TasksTab tasks={state.allTasks}/>
     },
     {
       name: "Artefact",
@@ -69,21 +65,30 @@ export default function AddTask(props) {
   ];
 
   useEffect(async() => {
-    const res = await fetch(`/api/tasks/talent-domains?ar=${ar}`);
-    const json = await res.json();
-    dispatch({ type: 'fetchTalentDomains', payload: json });
+    if (!state.talentDomains) {
+      const res = await fetch(`/api/tasks/talent-domains?ar=${ar}`);
+      const json = await res.json();
+      dispatch({ type: 'fetchTalentDomains', payload: json });
+      dispatch({ type: 'addToAllTasks', payload: json});
+    }
   },[]);
 
   useEffect(async() => {
-    const res = await fetch(`/api/tasks/weapon-domains?ar=${ar}`);
-    const json = await res.json();
-    dispatch({ type: 'fetchWeaponDomains', payload: json });
+    if (!state.weaponDomains) {
+      const res = await fetch(`/api/tasks/weapon-domains?ar=${ar}`);
+      const json = await res.json();
+      dispatch({ type: 'fetchWeaponDomains', payload: json });
+      dispatch({ type: 'addToAllTasks', payload: json});
+    }
   },[]);
 
   useEffect(async() => {
-    const res = await fetch(`/api/tasks/weekly-bosses?ar=${ar}&wl=${wl}`);
-    const json = await res.json();
-    dispatch({ type: 'fetchWeeklyBosses', payload: json });
+    if (!state.weeklyBosses) {
+      const res = await fetch(`/api/tasks/weekly-bosses?ar=${ar}&wl=${wl}`);
+      const json = await res.json();
+      dispatch({ type: 'fetchWeeklyBosses', payload: json });
+      dispatch({ type: 'addToAllTasks', payload: json});
+    }
   },[]);
 
   return (
@@ -108,7 +113,7 @@ export default function AddTask(props) {
           <span className="material-icons mr-2 text-lg leading-none">filter_list</span><span className="text-sm">Filters</span>
         </button>
       </div>
-      <Tabs tabs={tabs} activeTab={tabs[3].name} />
+      <Tabs tabs={tabs} activeTab={tabs[0].name} />
     </div>
   );
   function TaskCardContent(props) {

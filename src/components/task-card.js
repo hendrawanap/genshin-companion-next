@@ -7,6 +7,7 @@ import Modal from "@/components/utility/modal";
 import Image from "next/image";
 import { CSSTransition } from "react-transition-group";
 import { addUserTask, decrementRuns } from "pages/api/user-tasks";
+import { UserContext } from "@/contexts/UserContext";
 
 export default function TaskCard(props) {
   const task = props.task;
@@ -270,6 +271,7 @@ function Rewards({rewards}) {
 
 function ConsumeResinModal({day, task, cost, runs, closeModal, onChange, setRuns}) {
   const { intOriResin, setOriginalResin, condensedResin, incrementOriginalResin } = useContext(ResinContext);
+  const { userId } = useContext(UserContext);
   const resinSource = [
     {
       name: "Original",
@@ -293,7 +295,6 @@ function ConsumeResinModal({day, task, cost, runs, closeModal, onChange, setRuns
     if (intOriResin < cost * done) {
       setInsufficient(true)
     } else {
-      const userId = 1;
       const taskInfo = {
         name: task.name,
         runs: done,
@@ -385,6 +386,7 @@ function ConsumeResinModal({day, task, cost, runs, closeModal, onChange, setRuns
 }
 
 function AddTaskModal({task, runs, level, closeModal}) {
+  const { userId } = useContext(UserContext);
   const days = [
     'Sunday',
     'Monday',
@@ -399,7 +401,6 @@ function AddTaskModal({task, runs, level, closeModal}) {
   const [day, setDay] = useState(today);
 
   const addTask = async () => {
-    const userId = 1;
     const taskInfo = {
       name: task.name,
       type: task.type,

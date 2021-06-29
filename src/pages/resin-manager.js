@@ -9,6 +9,7 @@ import AddTask from "@/components/add-task";
 import AppLayout from '@/components/layouts/app';
 import BottomSlideOver from '@/components/utility/bottom-slide-over';
 import Button from '@/components/material/button';
+import { UserContext } from '@/contexts/UserContext';
 
 export default function ResinManager(props) {
   const [openSlide, setOpenSlide] = useState(false);
@@ -26,7 +27,7 @@ export default function ResinManager(props) {
   const [day, setDay] = useState(today);
   const [tasks, setTasks] = useState(null);
   const [totalCosts, setTotalCosts] = useState(0);
-  const userId = 1;
+  const { userId } = useContext(UserContext);
   
   const dayHandler = (day) => {
     setDay(day);

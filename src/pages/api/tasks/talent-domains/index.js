@@ -59,7 +59,7 @@ const rewards = [
   ]
 ]
 
-function makeTasks(ar) {
+function makeTasks(ar = 55) {
   setInitialLevelRuns(ar);
   const tasks = [];
   talentDomains.forEach(domain => {
@@ -94,7 +94,7 @@ function makeTasks(ar) {
   return tasks;
 }
 
-function setInitialLevelRuns(ar = 55) {
+function setInitialLevelRuns(ar) {
   if (ar < 28) {
     initialLevel = 1;
   } else if (ar < 36) {
@@ -107,6 +107,9 @@ function setInitialLevelRuns(ar = 55) {
 }
 
 export function fetchTalentDomains(name, day, requiredBy) {
+  if (!tasks) {
+    tasks = makeTasks();
+  }
   return filterTasks(day, requiredBy, name);
 }
 
@@ -126,7 +129,9 @@ function filterTasks(day, requiredBy, name) {
 
 export default async function handler(req, res) {
   const { day, requiredBy, name, ar, wl } = req.query;
-  if (!tasks || savedAr !== ar) {
+  if (!tasks) {
+    console.log(`fetch talent domains`);
+    savedAr = ar;
     tasks = makeTasks(ar);
   } else {
     console.log(`not first time, saved ar: ${savedAr}`);

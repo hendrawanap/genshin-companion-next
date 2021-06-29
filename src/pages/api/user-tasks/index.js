@@ -2,11 +2,9 @@ import firebaseInit from "../../../../firebase/init";
 import { fetchTalentDomains } from "../tasks/talent-domains";
 import { fetchWeaponDomains } from "../tasks/weapon-domains";
 
-// const userTasks = require("@/json/userTasks.json");
-
 async function fetchUserTasks(userId, day) {
   const firestore = firebaseInit().firestore();
-  const collection = await firestore.collection('usersTasks').where('userId', '==', parseInt(userId)).where('day', '==', day).get();
+  const collection = await firestore.collection('usersTasks').where('userId', '==', userId).where('day', '==', day).get();
   const userTasks = collection.docs.map(doc => doc.data());
   const response = [];
   userTasks.forEach((task, index) => {
@@ -53,7 +51,7 @@ export async function decrementRuns(userId, taskInfo) {
 }
 
 export default async function main(req, res) {
-  const { userId, day } = req.query;
-  const response = await fetchUserTasks(userId, day);
+  const { userId, day, ar, wl } = req.query;
+  const response = await fetchUserTasks(parseInt(userId), day);
   res.status(200).json(response);
 }

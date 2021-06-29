@@ -117,6 +117,9 @@ function setInitialLevelRuns(ar = 55) {
 }
 
 export function fetchWeaponDomains(name, day, requiredBy) {
+  if (!tasks) {
+    tasks = makeTasks();
+  }
   return filterTasks(day, requiredBy, name);
 }
 
@@ -136,7 +139,9 @@ function filterTasks(day, requiredBy, name) {
 
 export default async function handler(req, res) {
   const { day, requiredBy, name, ar, wl } = req.query;
-  if (!tasks || savedAr !== ar) {
+  if (!tasks) {
+    console.log(`fetch weapon domains`);
+    savedAr = ar;
     tasks = makeTasks(ar);
   } else {
     console.log(`not first time, saved ar: ${savedAr}`);
