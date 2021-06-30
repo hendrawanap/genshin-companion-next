@@ -1,12 +1,15 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { CSSTransition } from "react-transition-group";
+import Modal from "./utility/modal";
+import AddTaskModal from "./add-task-modal";
 
 export default function TodaysTaskCard(props) {
   const [isExpanded, setIsExpanded] = useState(false);
   const initialCardHeight = 78;
   const [expandedHeight, setExpandedHeight] = useState(0);
   const [cardHeight, setCardHeight] = useState();
+  const [openModal, setOpenModal] = useState(false);
 
   const handleClick = () => setIsExpanded(!isExpanded);
 
@@ -98,12 +101,16 @@ export default function TodaysTaskCard(props) {
               className={`text-primary text-sm py-2 ${
                 isExpanded ? "block" : "hidden"
               }`}
+              onClick={() => setOpenModal(true)}
             >
               Add Task
             </button>
           </div>
         </CSSTransition>
       </div>
+      <Modal isOpen={openModal} closeHandler={() => setOpenModal(false)}>
+        <AddTaskModal task={props.task} runs={1} level={props.task.level} closeModal={() => setOpenModal(false)}/>
+      </Modal>
     </div>
   );
 }
